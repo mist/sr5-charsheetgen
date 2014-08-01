@@ -1,0 +1,212 @@
+\documentclass[]{scrartcl}
+
+\usepackage[ngerman,german]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+%\usepackage[condensed,math]{iwona}
+\usepackage{helvet}
+
+%YEN Sign
+\usepackage{textcomp}
+
+%Graphics
+\usepackage{graphicx}
+\usepackage{chngpage}
+
+% No numbered Pages
+\pagestyle{empty}
+
+\usepackage{wasysym}
+
+% includepdf
+\usepackage{pdfpages}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage{pgf}
+
+\usepackage{etoolbox}
+
+\tikzset{every picture/.style={font issue={\fontsize{8}{12} \fontfamily{qhvc}}},
+		font issue/.style={execute at begin picture={#1\selectfont}}
+		}
+
+\newcounter{skillL}
+\newcommand{\srSkillPrintL}{}
+\newcommand{\srSkillAddL}[2]{
+	\srSkillInnerAddL{#1}{#2}{\value{skillL}}
+}
+\newcommand{\srSkillInnerAddL}[3]{
+	\gappto\srSkillPrintL{
+		\node [anchor=west] at ( -2.15 ,	-10.9-(0.447368421*#3) {#1};
+		\node [anchor=east] at ( 1.3 ,	-10.9-(0.447368421*#3) {\textbf{#2}};
+		\stepcounter{skillL}
+	}
+}
+\newcounter{skillR}
+\newcommand{\srSkillPrintR}{}
+\newcommand{\srSkillAddR}[2]{
+	\srSkillInnerAddR{#1}{#2}{\value{skillR}}
+}
+\newcommand{\srSkillInnerAddR}[3]{
+	\gappto\srSkillPrintR{
+		\node [anchor=west] at ( 2.25 ,	-10.9-(0.447368421*#3) {#1};
+		\node [anchor=east] at ( 5.7 ,	-10.9-(0.447368421*#3) {\textbf{#2}};
+		\stepcounter{skillR}
+	}
+}
+\newcounter{ID}
+\newcommand{\srIDPrint}{}
+\newcommand{\srIDAdd}[1]{
+	\srIDInnerAdd{#1}{\value{ID}}
+}
+\newcommand{\srIDInnerAdd}[2]{
+	\gappto\srIDPrint{
+		\stepcounter{ID}
+		\node [anchor=west] at ( -2.15 ,	-22.094-(0.447368421*#2) {#1};
+	}
+}
+\newcounter{Quality}
+\setcounter{Quality}{7}
+\newcommand{\srQualityPrint}{}
+\newcommand{\srQualityAdd}[3]{
+	\srQualityInnerAdd{#1}{#2}{#3}{\value{Quality}}
+}
+\newcommand{\srQualityInnerAdd}[4]{
+	\gappto\srQualityPrint{
+		\stepcounter{Quality}
+		\node [anchor=west] at ( 7.6 ,	-10.9-(0.447368421*#4) {#1};
+		\node [anchor=east] at ( 15.6 ,	-10.9-(0.447368421*#4) {#2};
+		\node [anchor=east] at ( 16 ,	-10.9-(0.447368421*#4) {\textbf{#3}};
+	}
+}
+\newcounter{Connection}
+\setcounter{Connection}{0}
+\newcommand{\srConnectionPrint}{}
+\newcommand{\srConnectionAdd}[4]{
+	\srConnectionInnerAdd{#1}{#2}{#3}{#4}{\value{Connection}}
+}
+\newcommand{\srConnectionInnerAdd}[5]{
+	\gappto\srConnectionPrint{
+		\node [anchor=west] at ( 7.6 ,	-21.647-(0.447368421*#5) {#1};
+		\node [anchor=east] at ( 13.3 ,	-21.647-(0.447368421*#5) {#2};
+		\node [anchor=east] at ( 14.6 ,	-21.647-(0.447368421*#5) {#3};
+		\node [anchor=east] at ( 15.8 ,	-21.647-(0.447368421*#5) {#4};
+		\stepcounter{Connection}
+	}
+}
+
+% Condition Monitor
+% Physikal Damage Track: = up(Body/2)+8
+% Stun Damage Track: = up(Willpower/2)+8
+
+\input{chargeninput.tex}
+
+
+\begin{document}
+
+%\forloop{skill}{1}{\value{skill} < \value{skills}{}
+
+\includepdf[pagecommand={
+	\begin{tikzpicture}[remember picture, overlay]
+		\node [anchor=west] at ( 11.2 ,	2.2 ) {\srCharacter};
+		\node [anchor=west] at ( 10.8 ,	1.7 ) {\srPlayer};
+		\node [anchor=west] at ( 11.8 ,	1.2 ) {\srNotes (v\srVersion)};
+%
+		\node [anchor=west] at ( 0.5 ,	-0.62 ) {\srPersAlias};
+		\node [anchor=west] at ( -1.3 ,	-1.06 ) {\srPersMetatype};
+		\node [anchor=west] at ( 2.9 ,	-1.06 ) {\srPersEthnicity};
+		\node [anchor=west] at ( -1.6 ,	-1.5  ) {\srPersAge};
+		\node [anchor=west] at ( 1.2 ,	-1.5  ) {\srPersSex};
+		\node [anchor=west] at ( 2.85 ,	-1.5  ) {\srPersHeight{} $m$};
+		\node [anchor=west] at ( 5 ,	-1.5  ) {\srPersWeight{} $kg$};
+		\node [anchor=west] at ( -1.0 ,	-1.9  ) {\srPersStreetcred};
+		\node [anchor=west] at ( 1.9 ,	-1.94 ) {\srPersNotoriety};
+		\node [anchor=west] at ( 4.3 ,	-1.94 ) {\srPersPublicawareness};
+		\node [anchor=west] at ( -1.4 ,	-2.38 ) {\srPersKarma};
+		\node [anchor=west] at ( 1.8 ,	-2.38 ) {\srPersTotalkarma};
+		\node [anchor=west] at ( 4.25 ,	-2.38 ) {\srPersMisc};
+%
+		\node [anchor=west] at ( -0.2 ,	-4.16 ) {\srAttrBody};
+		\node [anchor=west] at ( 4.25 ,	-4.16 ) {\srAttrEssence};
+		\node [anchor=west] at ( -0.2 ,	-4.61 ) {\srAttrAgility};
+		\node [anchor=west] at ( 4.25 ,	-4.61 ) {\srAttrMagicResonance};
+		\node [anchor=west] at ( -0.2 ,	-5.06 ) {\srAttrReaction};
+		\node [anchor=west] at ( 4.25 ,	-5.06 ) {\srAttrInitiative};
+		\node [anchor=west] at ( -0.2 ,	-5.51 ) {\srAttrStrength};
+		\node [anchor=west] at ( 4.25 ,	-5.51 ) {\srAttrInitiativeMatrix};
+		\node [anchor=west] at ( -0.2 ,	-5.96 ) {\srAttrWillpower};
+		\node [anchor=west] at ( 4.25 ,	-5.96 ) {\srAttrInitiativeAstral};
+		\node [anchor=west] at ( -0.2 ,	-6.41 ) {\srAttrLogic};
+		\node [anchor=west] at ( 4.25 ,	-6.41 ) {\srAttrComposure};
+		\node [anchor=west] at ( -0.2 ,	-6.86 ) {\srAttrIntuition};
+		\node [anchor=west] at ( 4.25 ,	-6.86 ) {\srAttrJudgeIntentions};
+		\node [anchor=west] at ( -0.2 ,	-7.31 ) {\srAttrCharisma};
+		\node [anchor=west] at ( 4.25 ,	-7.31 ) {\srAttrMemory};
+		\node [anchor=west] at ( -0.2 ,	-7.76 ) {\srAttrEdge};
+		\node [anchor=west] at ( 4.25 ,	-7.76 ) {\srAttrLiftCarry};
+		\node [anchor=west] at ( 4.25 ,	-8.21 ) {\srAttrMovement};
+		\node [anchor=west] at ( -0.2 ,	-8.61 ) {\srAttrLimitPhysical};
+		\node [anchor=west] at ( 2.45 ,	-8.61 ) {\srAttrLimitMental};
+		\node [anchor=west] at ( 5.1 ,	-8.61 ) {\srAttrLimitSocial};
+% 0.447368421
+		\srSkillPrintL;
+		\srSkillPrintR;
+% 0.447368421
+		\node [anchor=west] at ( -0.4 ,	-21.2 ) {\srPrimaryLifestyle};
+		\node [anchor=west] at ( -1.5 ,	-21.647 ) {\srNuyen~\textyen};
+		\node [anchor=west] at ( 3 ,	-21.647 ) {----};
+% 0.447368421
+		\srIDPrint;
+% 0.447368421
+		\node [anchor=west] at ( 8.4,	-0.61 ) {\srCCIArmor};
+		\node [anchor=west] at ( 13.4 ,	-0.61 ) {\textbf{\srCCIArmorRating}};
+		\node [anchor=west] at ( 9.3, -1.057 ) {\srCCIRange};
+		\node [anchor=west] at ( 8.4, -1.42 ) {\srCCIRangeDam};
+		\node [anchor=west] at ( 9.8, -1.42 ) {\srCCIRangeAcc};
+		\node [anchor=west] at ( 11.0, -1.42 ) {\srCCIRangeAP};
+		\node [anchor=west] at ( 11.8, -1.42 ) {\srCCIRangeMode};
+		\node [anchor=west] at ( 13.5, -1.42 ) {\srCCIRangeRC};
+		\node [anchor=west] at ( 15.1, -1.42 ) {\srCCIRangeAmmo};
+% 0.447368421
+		\node [anchor=west] at ( 9.3 ,	-2.38 ) {\srCCIMelee};
+		\node [anchor=west] at ( 8.6 ,	-2.763 ) {\srCCIMeleeReach $m$};
+		\node [anchor=west] at ( 11 ,	-2.763 ) {\srCCIMeleeDam};
+		\node [anchor=west] at ( 12.9 ,	-2.763 ) {\srCCIMeleeAcc};
+		\node [anchor=west] at ( 14.65 ,	-2.763 ) {\srCCIMeleeAP};
+% 0.447368421
+		\node [anchor=east] at ( 8.6 ,	-3.1 ) {\srCCISecMelee};
+		\node [anchor=west] at ( 8.6 ,	-3.1 ) {\srCCISecMeleeReach $m$};
+		\node [anchor=west] at ( 11 ,	-3.1 ) {\srCCISecMeleeDam};
+		\node [anchor=west] at ( 12.9 ,	-3.1 ) {\srCCISecMeleeAcc};
+		\node [anchor=west] at ( 14.65,	-3.1 ) {\srCCISecMeleeAP};
+% TODO:
+%		CONDITION MONITOR
+% 0.447368421		QUALITIES
+		\srQualityPrint;
+		\srConnectionPrint;
+	\end{tikzpicture}
+},pages=1]{sr5_blankodokumente.pdf}
+\includepdf[pagecommand={
+	\begin{tikzpicture}[remember picture, overlay]
+		\node [anchor=west] at ( 11.2 ,	2.2) {\srCharacter};
+		\node [anchor=west] at ( 10.8 ,	1.7) {\srPlayer};
+		\node [anchor=west] at ( 11.8 ,	1.2 ) {\srNotes (v\srVersion)};
+	\end{tikzpicture}
+},pages=2]{sr5_blankodokumente.pdf}
+
+\includepdf[pagecommand={
+	\begin{tikzpicture}[remember picture, overlay]
+		\node [anchor=north] at (current page.north) {
+%		\includegraphics[page=1,trim=0 760 0 2.6,clip]{sr5_blankodokumente}
+		\includegraphics[page=1,trim=0 760 0 0,clip]{sr5_blankodokumente}
+		};
+		\node [anchor=west] at ( 11.2 ,	2.2) {\srCharacter};
+		\node [anchor=west] at ( 10.8 ,	1.7) {\srPlayer};
+		\node [anchor=west] at ( 11.8 ,	1.2 ) {\srNotes (v\srVersion)};
+	\end{tikzpicture}
+%
+	{\huge Munition}
+	Der Text darunter
+}]{background.png}
+
+\end{document}
