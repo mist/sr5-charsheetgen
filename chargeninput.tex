@@ -19,8 +19,8 @@
 \newcommand{\srPersStreetcred}{\LaTeX}
 \newcommand{\srPersNotoriety}{2}
 \newcommand{\srPersPublicawareness}{3}
-\newcommand{\srPersKarma}{9}
-\newcommand{\srPersTotalkarma}{84}
+\newcommand{\srPersKarma}{19}
+\newcommand{\srPersTotalkarma}{94}
 \newcommand{\srPersMisc}{schwarzes Fell}
 % ATTRIBUTES
 \newcommand{\srAttrBody}{3}
@@ -92,14 +92,14 @@
 
 % IDs/LIFESTYLE/CURRENCY
 \newcommand{\srPrimaryLifestyle}{Mittelschicht}
-\newcommand{\srNuyen}{88.802}
+\newcommand{\srNuyen}{110.427}
 \newcommand{\srLicense}{\LaTeX}
 \srIDAdd{St. \textbf{5} / Unterschicht /
 --- / Reflexbooster; Riggerkontrolle}
 \srIDAdd{}
 \srIDAdd{}
 \srIDAdd{}
-\srIDAdd{Spesen: 13.000 \textyen}
+\srIDAdd{Spesen: 12.000 \textyen}
 % CORE COMBAT INFO
 \newcommand{\srCCIArmor}{\LaTeX}
 \newcommand{\srCCIArmorRating}{\TeX}
@@ -150,16 +150,18 @@
 %%%%%%%%%%%%%%%%%%%%
 
 \newcommand{\PageThree}{
-\section*{Munition}
+
+\section*{Waffenmodifikatoren und Munition}
+
 \begin{tabular}[<+position+>]{r | l}
 	\multicolumn{2}{l}{\textbf{Automatikpistole} }\\
 	\multicolumn{2}{r}{Ceska Black Scorpion, Steyr TMP}\\
 	\hline
-	Magazine & \\
+	Magazine & je 4 \\
 	\hline
-	Standart &  \\
+	Standart & 93 \\
 	Gel &  \\
-	Explosiv &  \\
+	Explosiv & 20 \\
 	APDS & \\
 	\hline
 \end{tabular}
@@ -167,16 +169,14 @@
 	\multicolumn{2}{l}{\textbf{Maschinenpistole}}\\
 	\multicolumn{2}{r}{Colt Cobra TZ-120}\\
 	\hline
-	Magazine & 6 +  \\
+	Magazine & 12  \\
 	\hline
-	Standart & -9 \\
-	Gel &  \\
-	Explosiv &  \\
+	Standart & 123 \\
+	Gel & 194 \\
+	Explosiv & 3 \\
 	APDS & \\
 	\hline
 \end{tabular}
-
-
 \begin{tabular}[]{r | l}
 	\multicolumn{2}{l}{\textbf{Sturmgewehre}}\\
 	\multicolumn{2}{r}{AK-98 (+Granatwerfer)}\\
@@ -192,31 +192,65 @@
 	Schockgranaten & 4 \\
 	\hline
 \end{tabular}
+
+
 \begin{tabular}[]{r | l}
 	\multicolumn{2}{l}{\textbf{Scharfschützengewehr}}\\
 	\multicolumn{2}{r}{Cavalier Arms Crockett EBR}\\
 	\hline
-	Magazine & 10 + 5 + \\
+	Magazine & 16 \\
 	\hline
-	Standart & 12 \\
+	Standart & 112 \\
 	Gel &  \\
 	Explosiv &  \\
 	APDS & 20 \\
 	\hline
 \end{tabular}
-
 \begin{tabular}[]{r | l}
 	\multicolumn{2}{l}{\textbf{Injektionspfeile}}\\
-	\multicolumn{2}{r}{Parashield Pfeilpistole, Parashield Pfeilgewehr}\\
+	\multicolumn{2}{r}{Parashield Pfeilpistole,}\\
+	\multicolumn{2}{r}{Parashield Pfeilgewehr}\\
 	\hline
 	Pfeile & 5 \\
 	Pfeile mit Narcojet & 20 \\
 	\hline
 \end{tabular}
 
-\section*{Waffenmodifikationen}
+Defiance Exschock mit 20 Schuss \\
+Yamaha Pulsar mit 20 Schuss \\
+Raketenwerfer Splittergranaten
 
-Parashield Pfeilgewehr: Lasermarkierer
+\begin{multicols}{2}
+
+\section*{Waffenmodifikationen und -zubehör}
+\begin{itemize}
+	\item Parashield Pfeilgewehr
+		\begin{itemize}
+			\item  Lasermarkierer
+		\end{itemize}
+	\item Cavalier Arms Crockett EBR
+		\begin{itemize}
+			\item Smartlink
+			\item Schalldämpfer
+			\item „Aktenkoffer“
+		\end{itemize}
+	\item Colt Cobra TZ-120
+		\begin{itemize}
+			\item Schalldämpfer
+		\end{itemize}
+	\item Ceska Black Scorpion
+		\begin{itemize}
+			\item Schalldämpfer
+			\item Zielfernrohr
+			\item Tarn- \& Schnellziehholster
+		\end{itemize}
+	\item Steyr TMP
+		\begin{itemize}
+			\item Schalldämpfer
+			\item Zielfernrohr
+			\item Tarn- \& Schnellziehholster
+		\end{itemize}
+\end{itemize}
 
 
 \section*{Loot}
@@ -232,9 +266,13 @@ Parashield Pfeilgewehr: Lasermarkierer
 		\end{itemize}
 	\item Panzerweste
 	\item Savalette Guardian (Schwere Pist.)
+	\item Sturmschrotflinte
 	\item Kommlink Stufe 1 + Subvokalmikro
+	\item Colt M23 (Sturmgewehr) + 3 Streifen Std.-Muni.
 \end{itemize}
+\vphantom{2cm}
 
+\end{multicols}
 
 }
 
