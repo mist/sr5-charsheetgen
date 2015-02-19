@@ -6,8 +6,8 @@
 
 \newcommand{\srCharacter}{Arbeitstitel}
 \newcommand{\srPlayer}{mist}
-\newcommand{\srNotes}{<+notes+>}
-\newcommand{\srVersion}{0.1 $\alpha$}
+\newcommand{\srNotes}{}
+\newcommand{\srVersion}{0.2 RC1}
 % PERSONAL DATA
 \newcommand{\srPersAlias}{<+alias+>}
 \newcommand{\srPersMetatype}{Mensch}
@@ -19,42 +19,64 @@
 \newcommand{\srPersStreetcred}{0}
 \newcommand{\srPersNotoriety}{0}
 \newcommand{\srPersPublicawareness}{0}
-\newcommand{\srPersKarma}{<+karma+>}
-\newcommand{\srPersTotalkarma}{<+totalkarma+>}
+\newcommand{\srPersKarma}{16}
+\newcommand{\srPersTotalkarma}{34}
 \newcommand{\srPersMisc}{}
 % ATTRIBUTES
-\newcommand{\srAttrBody}{<++>}
-\newcommand{\srAttrAgility}{<++>}
-\newcommand{\srAttrReaction}{<++>}
-\newcommand{\srAttrStrength}{<++>}
-\newcommand{\srAttrWillpower}{<++>}
-\newcommand{\srAttrLogic}{<++>}
-\newcommand{\srAttrIntuition}{<++>}
-\newcommand{\srAttrCharisma}{<++>}
-\newcommand{\srAttrEdge}{<++>}
-\newcommand{\srAttrEdgeMax}{<++>}
-\newcommand{\srAttrEssence}{<++>}
-\newcommand{\srAttrMagicResonance}{<++>}
-\newcommand{\srAttrInitiative}{<++>}
-\newcommand{\srAttrInitiativeMatrix}{<++>}
-\newcommand{\srAttrInitiativeAstral}{<++>}
-\newcommand{\srAttrComposure}{<++>}
-\newcommand{\srAttrJudgeIntentions}{<++>}
-\newcommand{\srAttrMemory}{<++>}
-\newcommand{\srAttrLiftCarry}{<++>}
-\newcommand{\srAttrMovement}{ /  / $ \frac{m}{\mathrm{Erfolg}}$}
-\newcommand{\srAttrLimitPhysical}{<++>}
-\newcommand{\srAttrLimitMental}{<++>}
-\newcommand{\srAttrLimitSocial}{<++>}
+\newcommand{\srAttrBody}{4}
+\newcommand{\srAttrAgility}{2}
+\newcommand{\srAttrReaction}{4}
+\newcommand{\srAttrStrength}{2}
+\newcommand{\srAttrWillpower}{5}
+\newcommand{\srAttrLogic}{4}
+\newcommand{\srAttrIntuition}{5}
+\newcommand{\srAttrCharisma}{6}
+\newcommand{\srAttrEdge}{2}
+\newcommand{\srAttrEdgeMax}{7}
+\newcommand{\srAttrEssence}{6}
+\newcommand{\srAttrMagicResonance}{6}
+\newcommand{\srAttrInitiative}{9 + 1W6}
+\newcommand{\srAttrInitiativeMatrix}{}
+\newcommand{\srAttrInitiativeAstral}{10 + 2W6}
+\newcommand{\srAttrComposure}{11}
+\newcommand{\srAttrJudgeIntentions}{11}
+\newcommand{\srAttrMemory}{10}
+\newcommand{\srAttrLiftCarry}{6}
+\newcommand{\srAttrMovement}{ 4 / 8 / $ + \frac{2 m}{\mathrm{Erfolg}}$}
+\newcommand{\srAttrLimitPhysical}{4}
+\newcommand{\srAttrLimitMental}{6}
+\newcommand{\srAttrLimitSocial}{8}
 % SKILLS
+\srSkillAddL{Schwimmen ( - Athl.)}{1}
+\srSkillAddL{Akrobatik (G - Athl.)}{1}
+\srSkillAddL{Laufen (S - Athl.)}{1}
+\srSkillAddL{Schleihen (G - Heiml.)}{1}
 \srSkillAddL{}{}
+\srSkillAddL{Navigation (I - Natur)}{2}
+\srSkillAddL{Spurenlesen (I - Natur)}{2}
+\srSkillAddL{Survival (W - Natur)}{2}
+\srSkillAddL{}{}
+\srSkillAddL{Gewehre}{2}
+%\srSkillAddL{<+Name+>}{<+Wert+>}
 
+\srSkillAddR{Spruchzauberei (M - Hex.)}{6}
+\srSkillAddR{Antimagie (M - Hex.)}{6}
+\srSkillAddR{Askennen (I)}{4}
+\srSkillAddR{Herbeirufen (M - Beschw.)}{6}
+\srSkillAddR{Verbannen (M - Beschw.)}{3}
+\srSkillAddR{Binden (M-Beschw.)}{3}
 \srSkillAddR{}{}
-%\srSkillAddR{<+Name+>}{<+Wert+>}j
-% \srSkillAddR{<+Name+>}{<+Wert+>}
+
+\srSkillAddR{Wahrnehmen (I)}{3}
+\srSkillAddR{Einschüchtern (C)}{3}
+\srSkillAddR{Führung (C - Einfluss)}{2}
+\srSkillAddR{Verhandlung (C - Einfluss)}{4}
+\srSkillAddR{Überreden (C - Schausp.)}{3}
+\srSkillAddR{}{}
+%\srSkillAddR{<+Name+>}{<+Wert+>}
 
 % IDs/LIFESTYLE/CURRENCY
-\newcommand{\srPrimaryLifestyle}{<++>}
+\newcommand{\srPrimaryLifestyle}{ -- }
 \newcommand{\srNuyen}{}
 \newcommand{\srLicense}{}
 %\srIDAdd{St. \textbf{5} / Unterschicht /
@@ -85,16 +107,21 @@
 %\newcommand{\sr<+CMD+>}{<+CONT+>}
 %	TODO: CONDITION MONITOR
 %	QUALITIES
-\srQualityAdd{Analytischer Geist (5)}{\begin{minipage}[t]{4.5cm}\tiny +2 auf Logikproben $\in$ (Erkennen von Mustern, Analysieren oder Finden von Hinweisen, Lösen von Rätseln)\end{minipage}}{V}
-\srQualityAdd{Außergewöhnliches Attribut (14)}{(Logik)}{V}
+%\srQualityAdd{Analytischer Geist (5)}{\begin{minipage}[t]{4.5cm}\tiny +2 auf Logikproben $\in$ (Erkennen von Mustern, Analysieren oder Finden von Hinweisen, Lösen von Rätseln)\end{minipage}}{V}
+%\srQualityAdd{Außergewöhnliches Attribut (14)}{(Logik)}{V}
+\srQualityAdd{Astrales Chamäleon}{}{ ~~-10}
 \srQualityAdd{}{}{}
+\srQualityAdd{Abhängigkeit}{Alkohol, mittel}{~~+9}
+%\srQualityAdd{}{}{}
 
-\srQualityAdd{Auffälliger Stil (5)}{}{N}
-\srQualityAdd{Händezittern (7)}{\begin{minipage}[t]{4.5cm}\tiny Geschicklichkeit -2 WENN Symptome \\ Erlebnis $\Rightarrow$ Gesch. + Konst. (4) $\Rightarrow$ Symptome\end{minipage}}{N}
-\srQualityAdd{Schwaches Immunsystem (10)}{\begin{minipage}[t]{4.5cm}\tiny Kraft v. Krankheit +2 bei Widerstandsprobe \\ Schlechter Ruf +1\end{minipage}}{N}
+%\srQualityAdd{Auffälliger Stil (5)}{}{N}
+%\srQualityAdd{Händezittern (7)}{\begin{minipage}[t]{4.5cm}\tiny Geschicklichkeit -2 WENN Symptome \\ Erlebnis $\Rightarrow$ Gesch. + Konst. (4) $\Rightarrow$ Symptome\end{minipage}}{N}
+%\srQualityAdd{Schwaches Immunsystem (10)}{\begin{minipage}[t]{4.5cm}\tiny Kraft v. Krankheit +2 bei Widerstandsprobe \\ Schlechter Ruf +1\end{minipage}}{N}
 %\srQualityAdd{Vorurteil}{Konzernführung Ares Macrotechnology, radikal}{N}
 %	Connections
-\srConnectionAdd{}{}{}{}
+\srConnectionAdd{(Schmuggler)}{}{}{}
+\srConnectionAdd{(Taliskrämer)}{}{}{}
+\srConnectionAdd{(Stammesangehörige)}{}{}{}
 
 
 
