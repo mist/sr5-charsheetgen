@@ -47,15 +47,15 @@
 \newcommand{\srAttrLimitMental}{<++>}
 \newcommand{\srAttrLimitSocial}{<++>}
 % SKILLS
-\srSkillAddL{}{}
+\srSkillAddL{<+Name+>}{<+Wert+>}
+%\srSkillAddL{<+Name+>}{<+Wert+>}
 
-\srSkillAddR{}{}
-%\srSkillAddR{<+Name+>}{<+Wert+>}j
-% \srSkillAddR{<+Name+>}{<+Wert+>}
+\srSkillAddR{<+Name+>}{<+Wert+>}
+%\srSkillAddR{<+Name+>}{<+Wert+>}
 
 % IDs/LIFESTYLE/CURRENCY
-\newcommand{\srPrimaryLifestyle}{<++>}
-\newcommand{\srNuyen}{}
+\newcommand{\srPrimaryLifestyle}{<+Lifestyle+> (Miete: \sout{<+payedDates+>} <+DueDates+>)}
+\newcommand{\srNuyen}{<+nuyen+>}
 \newcommand{\srLicense}{}
 %\srIDAdd{St. \textbf{5} / Unterschicht /
 %--- / Reflexbooster; Riggerkontrolle}
@@ -63,44 +63,73 @@
 \srIDAdd{}
 \srIDAdd{}
 % CORE COMBAT INFO
-\newcommand{\srCCIArmor}{}
-\newcommand{\srCCIArmorRating}{}
-\newcommand{\srCCIRange}{}
-\newcommand{\srCCIRangeDam}{}
-\newcommand{\srCCIRangeAcc}{}
-\newcommand{\srCCIRangeAP}{}
-\newcommand{\srCCIRangeMode}{}
-\newcommand{\srCCIRangeRC}{}
-\newcommand{\srCCIRangeAmmo}{}
-\newcommand{\srCCIMelee}{}
-\newcommand{\srCCIMeleeReach}{}
-\newcommand{\srCCIMeleeDam}{}
-\newcommand{\srCCIMeleeAcc}{}
-\newcommand{\srCCIMeleeAP}{}
-\newcommand{\srCCISecMelee}{}
-\newcommand{\srCCISecMeleeReach}{}
-\newcommand{\srCCISecMeleeDam}{}
-\newcommand{\srCCISecMeleeAcc}{}
-\newcommand{\srCCISecMeleeAP}{}
+\newcommand{\srCCIArmor}{<++>}
+\newcommand{\srCCIArmorRating}{<++>}
+\newcommand{\srCCIRange}{<++>}
+\newcommand{\srCCIRangeDam}{<++>}
+\newcommand{\srCCIRangeAcc}{<++>}
+\newcommand{\srCCIRangeAP}{<++>}
+\newcommand{\srCCIRangeMode}{<++>}
+\newcommand{\srCCIRangeRC}{<++>}
+\newcommand{\srCCIRangeAmmo}{<++>}
+\newcommand{\srCCIMelee}{<++>}
+\newcommand{\srCCIMeleeReach}{<++>}
+\newcommand{\srCCIMeleeDam}{<++>}
+\newcommand{\srCCIMeleeAcc}{<++>}
+\newcommand{\srCCIMeleeAP}{<++>}
+\newcommand{\srCCISecMelee}{<++>}
+\newcommand{\srCCISecMeleeReach}{<++>}
+\newcommand{\srCCISecMeleeDam}{<++>}
+\newcommand{\srCCISecMeleeAcc}{<++>}
+\newcommand{\srCCISecMeleeAP}{<++>}
 %\newcommand{\sr<+CMD+>}{<+CONT+>}
 %	TODO: CONDITION MONITOR
 %	QUALITIES
-\srQualityAdd{Analytischer Geist (5)}{\begin{minipage}[t]{4.5cm}\tiny +2 auf Logikproben $\in$ (Erkennen von Mustern, Analysieren oder Finden von Hinweisen, Lösen von Rätseln)\end{minipage}}{V}
-\srQualityAdd{Außergewöhnliches Attribut (14)}{(Logik)}{V}
+\srQualityAdd{<+name+>}{\begin{minipage}[t]{4.5cm}\tiny <+description+>)\end{minipage}}{<+Value+>}
 \srQualityAdd{}{}{}
 
-\srQualityAdd{Auffälliger Stil (5)}{}{N}
-\srQualityAdd{Händezittern (7)}{\begin{minipage}[t]{4.5cm}\tiny Geschicklichkeit -2 WENN Symptome \\ Erlebnis $\Rightarrow$ Gesch. + Konst. (4) $\Rightarrow$ Symptome\end{minipage}}{N}
-\srQualityAdd{Schwaches Immunsystem (10)}{\begin{minipage}[t]{4.5cm}\tiny Kraft v. Krankheit +2 bei Widerstandsprobe \\ Schlechter Ruf +1\end{minipage}}{N}
-%\srQualityAdd{Vorurteil}{Konzernführung Ares Macrotechnology, radikal}{N}
-%	Connections
-\srConnectionAdd{}{}{}{}
+%	Contacts
+\srContactsAdd{}{}{}{}
 
 
 
 %%%%%%%%%%%%%%%%%%%%
 %%    PAGE TWO    %%
 %%%%%%%%%%%%%%%%%%%%
+
+\srRangedAdd{<+name+>}{<+dammage+>}{<+acc+>}{<+AP+>}{<+mode+>}{<+rc+>}{<+ammo+>}
+%\srRangedAdd{<+name+>}{<+dammage+>}{<+acc+>}{<+AP+>}{<+mode+>}{<+rc+>}{<+ammo+>}
+
+\srArmorAdd{<+name+>}{<+rating+>}{<+notes+>}
+%\srArmorAdd{<+name+>}{<+rating+>}{<+notes+>}
+
+\srAugmentationAdd{<+name+>}{<+rating+>}{<+notes+>}{<+essence+>}
+%\srAugmentationAdd{<+name+>}{<+rating+>}{<+notes+>}{<+essence+>}
+
+\srGearAdd{<+name+>}{<+rating+>}
+%\srGearAdd{<+name+>}{<+rating+>}
+
+\srMeeleeAdd{<+name+>}{<+reach+>}{<+dammage+>}{<+acc+>}{<+AP+>}
+%\srMeeleeAdd{<+name+>}{<+reach+>}{<+dammage+>}{<+acc+>}{<+AP+>}
+%\srMeleeAdd{Tomahawk}{\begin{minipage}[t]{1.1cm}\tiny  2~/~~4~/~~6~/~10 \\ 0~/~-1~/~-3~/~-6 \end{minipage}}{(Str+1)K}{5}{DK}
+
+\newcommand{\srVehicleName}{<+cont+>}
+\newcommand{\srVehicleAcc}{<+cont+>}
+\newcommand{\srVehiclePilot}{<+cont+>}
+\newcommand{\srVehicleArmor}{<+cont+>}
+\newcommand{\srVehicleHandling}{<+cont+>}
+\newcommand{\srVehicleSpeed}{<+cont+>}
+\newcommand{\srVehicleBody}{<+cont+>}
+\newcommand{\srVehicleSensor}{<+cont+>}
+\newcommand{\srVehicleNotesA}{<+cont+>}
+\newcommand{\srVehicleNotesB}{<+cont+>}
+\newcommand{\srVehicleNotesC}{<+cont+>}
+
+\srSPRCAdd{<+SPRC+>}{<+type/target+>}{<+range+>}{<+duration+>}{<+drain+>}
+%\srSPRCAdd{<+SPRC+>}{<+type/target+>}{<+range+>}{<+duration+>}{<+drain+>}
+
+%\srSPRCAdd{\textbf{\underline{Kleidung}}}{}{}{\textbf{Anzahl}}{\textbf{Einzelpreis}}
+%\srSPRCAdd{<+name+>}{}{}{<++>}{<+preis+> \textyen}
 
 %%%%%%%%%%%%%%%%%%%%
 %%   PAGE THREE   %%
@@ -186,20 +215,3 @@
 \end{multicols}
 
 }
-
-%Notes:
-%  Restlichverstärkung in Elfen eingebaut
-% Kontaktlinsen (3) kaufen
-%  Bildverbindung
-%  Infrarotsicht
-%  Smartlink
-%  
-% Sichtgerät (6) kaufen & in Vollhelm von Vollpanzerung einbauen
-%  Blitzkompensation
-%  Sichtverbesserung
-%  Sichtvergrößerung
-% Sichtgerät (6) kaufen & in Helm von Motorrad einbauen
-%  Sichtverbesserung
-%
-% Kaufen:
-% Lizenz für Colt Cobra TZ-120 und Steyr TMP und Ceska Black Scorpion
