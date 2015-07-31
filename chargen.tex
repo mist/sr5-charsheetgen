@@ -97,32 +97,27 @@
 		\node [anchor=east] at ( 16 ,	-10.9-(0.447368421*#4) {\textbf{#3}};
 	}
 }
-\newcounter{Connection}
-\setcounter{Connection}{0}
-\newcommand{\srConnectionPrint}{}
-\newcommand{\srConnectionAdd}[4]{
-	\srConnectionInnerAdd{#1}{#2}{#3}{#4}{\value{Connection}}
+\newcounter{Contacts}
+\setcounter{Contacts}{0}
+\newcommand{\srContactsPrint}{}
+\newcommand{\srContactsAdd}[4]{
+	\srContactsInnerAdd{#1}{#2}{#3}{#4}{\value{Contacts}}
 }
-\newcommand{\srConnectionInnerAdd}[5]{
-	\gappto\srConnectionPrint{
+\newcommand{\srContactsInnerAdd}[5]{
+	\gappto\srContactsPrint{
 		\node [anchor=west] at ( 7.6 ,	-21.647-(0.447368421*#5) {#1};
 		\node [anchor=east] at ( 13.3 ,	-21.647-(0.447368421*#5) {\textbf{#2}};
 		\node [anchor=east] at ( 14.6 ,	-21.647-(0.447368421*#5) {\textbf{#3}};
 		\node [anchor=east] at ( 15.8 ,	-21.647-(0.447368421*#5) {\textbf{#4}};
-		\stepcounter{Connection}
+		\stepcounter{Contacts}
 	}
 }
 
 \newcounter{Edge}
 \newcommand{\srEdgeGraphicPrint}{}
-%\newcommand{\srConnectionAdd}[4]{
-%	\srConnectionInnerAdd{#1}{#2}{#3}{#4}{\value{Connection}}
-%}
 \newcommand{\srEdgeInnerAdd}[1]{
 	\gappto\srEdgeGraphicPrint{
 		\node [anchor=center, regular polygon, fill=black, regular polygon sides=6, rotate=30,font=\scriptsize] at ( 1.7-#1*0.235, -8.21) {};
-%		\node [anchor=center, regular polygon, fill=black, regular polygon sides=6, rotate=30] at ( 1.7, -8.21) {};
-%		\node [anchor=center, regular polygon, fill=black, regular polygon sides=6, rotate=30] at ( -0.2, -8.21) {};
 		\stepcounter{Edge}
 	}
 }
@@ -131,6 +126,105 @@
 % Condition Monitor
 % Physikal Damage Track: = up(Body/2)+8
 % Stun Damage Track: = up(Willpower/2)+8
+
+%% COMMANDS - PAGE TWO
+
+\newcounter{srRanged}
+\newcommand{\srRangedAdd}[7]{
+	\srRangedInnerAdd{#1}{#2}{#3}{#4}{#5}{#6}{#7}{\value{srRanged}}
+}
+\newcommand{\srRangedPrint}{}
+\newcommand{\srRangedInnerAdd}[8]{
+	\gappto\srRangedPrint{
+		\stepcounter{srRanged}
+		\node [anchor=west] at ( -2.1 ,	-0.55-(0.447368421*#8) {#1};
+		\node [anchor=east] at (  1.2 ,	-0.55-(0.447368421*#8) {#2};
+		\node [anchor=east] at (  2 ,	-0.55-(0.447368421*#8) {#3};
+		\node [anchor=east] at (  3 ,	-0.55-(0.447368421*#8) {#4};
+		\node [anchor=east] at (  4 ,	-0.55-(0.447368421*#8) {#5};
+		\node [anchor=east] at (  5 ,	-0.55-(0.447368421*#8) {#6};
+		\node [anchor=east] at (  6 ,	-0.55-(0.447368421*#8) {#7};
+	}
+}
+
+\newcounter{srArmor}
+\newcommand{\srArmorAdd}[3]{
+	\srArmorInnerAdd{#1}{#2}{#3}{\value{srArmor}}
+}
+\newcommand{\srArmorPrint}{}
+\newcommand{\srArmorInnerAdd}[4]{
+	\gappto\srArmorPrint{
+		\stepcounter{srArmor}
+		\node [anchor=west] at ( -2.1 ,	-5.1-(0.447368421*#4) {#1};
+		\node [anchor=east] at (  2.5 ,	-5.1-(0.447368421*#4) {#2};
+		\node [anchor=east] at (  6.35,	-5.1-(0.447368421*#4) {#3};
+	}
+
+}
+
+\newcounter{srAugmentation}
+\newcommand{\srAugmentationAdd}[4]{
+	\srAugmentationInnerAdd{#1}{#2}{#3}{#4}{\value{srAugmentation}}
+}
+\newcommand{\srAugmentationPrint}{}
+\newcommand{\srAugmentationInnerAdd}[5]{
+	\gappto\srAugmentationPrint{
+		\stepcounter{srAugmentation}
+		\node [anchor=west] at ( -2.1 ,	-9.55-(0.447368421*#5) {#1};
+		\node [anchor=east] at (  2.35 ,	-9.55-(0.447368421*#5) {#2};
+		\node [anchor=east] at (  3.35,	-9.55-(0.447368421*#5) {#3};
+		\node [anchor=east] at (  6.35,	-9.55-(0.447368421*#5) {#4};
+	}
+
+}
+
+\newcounter{srGear}
+\newcommand{\srGearAdd}[2]{
+	\srGearInnerAdd{#1}{#2}{\value{srGear}}
+}
+\newcommand{\srGearPrint}{}
+\newcommand{\srGearInnerAdd}[3]{
+	\gappto\srGearPrint{
+		\stepcounter{srGear}
+		\node [anchor=west] at ( -2.1 ,	-14.5-(0.447368421*#3) {#1};
+		\node [anchor=east] at (  6.35,	-14.5-(0.447368421*#3) {#2};
+	}
+
+}
+
+
+\newcounter{srMelee}
+\newcommand{\srMeleeAdd}[5]{
+	\srMeleeInnerAdd{#1}{#2}{#3}{#4}{#5}{\value{srMelee}}
+}
+\newcommand{\srMeleePrint}{}
+\newcommand{\srMeleeInnerAdd}[6]{
+	\gappto\srMeleePrint{
+		\stepcounter{srMelee}
+		\node [anchor=west] at ( 7.51 ,	-0.55-(0.447368421*#6) {#1};
+		\node [anchor=east] at ( 12 ,	-0.55-(0.447368421*#6) {#2};
+		\node [anchor=east] at ( 13.7 ,	-0.55-(0.447368421*#6) {#3};
+		\node [anchor=east] at ( 14.8 ,	-0.55-(0.447368421*#6) {#4};
+		\node [anchor=east] at ( 16.2 ,	-0.55-(0.447368421*#6) {#5};
+	}
+}
+
+\newcounter{srSPRC}
+\newcommand{\srSPRCAdd}[5]{
+	\srSPRCInnerAdd{#1}{#2}{#3}{#4}{#5}{\value{srSPRC}}
+}
+\newcommand{\srSPRCPrint}{}
+\newcommand{\srSPRCInnerAdd}[6]{
+	\gappto\srSPRCPrint{
+		\stepcounter{srSPRC}
+		\node [anchor=west]  at ( 7.55,	-14.5-(0.447368421*#6) {#1};
+		\node [anchor=west]  at ( 10.9,	-14.5-(0.447368421*#6) {#2};
+		\node [anchor=west]  at ( 12.5,	-14.5-(0.447368421*#6) {#3};
+		\node [anchor=east]  at ( 14.5,	-14.5-(0.447368421*#6) {#4};
+		\node [anchor=west]  at ( 15.2,	-14.5-(0.447368421*#6) {#5};
+	}
+
+}
 
 \input{chargeninput.tex}
 
@@ -243,7 +337,7 @@
 %		CONDITION MONITOR
 % 0.447368421		QUALITIES
 	\srQualityPrint;
-	\srConnectionPrint;
+	\srContactsPrint;
 \end{tikzpicture}
 
 
@@ -258,6 +352,13 @@
 	\node [anchor=west] at ( 11.2 ,	2.2) {\srCharacter};
 	\node [anchor=west] at ( 10.8 ,	1.7) {\srPlayer};
 	\node [anchor=west] at ( 11.8 ,	1.2 ) {\srNotes (v\srVersion)};
+%
+	\srRangedPrint;
+	\srArmorPrint;
+	\srAugmentationPrint;
+	\srGearPrint;
+	\srMeleePrint;
+	\srSPRCPrint;
 \end{tikzpicture}
 
 \newpage
