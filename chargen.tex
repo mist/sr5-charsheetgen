@@ -137,13 +137,13 @@
 \newcommand{\srRangedInnerAdd}[8]{
 	\gappto\srRangedPrint{
 		\stepcounter{srRanged}
-		\node [anchor=west] at ( -2.1 ,	-0.55-(0.447368421*#8) {#1};
-		\node [anchor=east] at (  1.2 ,	-0.55-(0.447368421*#8) {#2};
-		\node [anchor=east] at (  2 ,	-0.55-(0.447368421*#8) {#3};
-		\node [anchor=east] at (  3 ,	-0.55-(0.447368421*#8) {#4};
-		\node [anchor=east] at (  4 ,	-0.55-(0.447368421*#8) {#5};
-		\node [anchor=east] at (  5 ,	-0.55-(0.447368421*#8) {#6};
-		\node [anchor=east] at (  6 ,	-0.55-(0.447368421*#8) {#7};
+		\node [anchor=west]   at ( -2.2 ,	-0.55-(0.447368421*#8) {#1};
+		\node [anchor=east]	  at (  1.4 ,	-0.55-(0.447368421*#8) {#2};
+		\node [anchor=center] at (  2	,	-0.55-(0.447368421*#8) {#3};
+		\node [anchor=east]   at (  3	,	-0.55-(0.447368421*#8) {#4};
+		\node [anchor=center] at (  4	,	-0.55-(0.447368421*#8) {#5};
+		\node [anchor=center] at (  5	,	-0.55-(0.447368421*#8) {#6};
+		\node [anchor=east]   at (  6.3 ,	-0.55-(0.447368421*#8) {#7};
 	}
 }
 
@@ -155,7 +155,7 @@
 \newcommand{\srArmorInnerAdd}[4]{
 	\gappto\srArmorPrint{
 		\stepcounter{srArmor}
-		\node [anchor=west] at ( -2.1 ,	-5.1-(0.447368421*#4) {#1};
+		\node [anchor=west] at ( -2.2 ,	-5.1-(0.447368421*#4) {#1};
 		\node [anchor=east] at (  2.5 ,	-5.1-(0.447368421*#4) {#2};
 		\node [anchor=east] at (  6.35,	-5.1-(0.447368421*#4) {#3};
 	}
@@ -170,8 +170,8 @@
 \newcommand{\srAugmentationInnerAdd}[5]{
 	\gappto\srAugmentationPrint{
 		\stepcounter{srAugmentation}
-		\node [anchor=west] at ( -2.1 ,	-9.55-(0.447368421*#5) {#1};
-		\node [anchor=east] at (  2.35 ,	-9.55-(0.447368421*#5) {#2};
+		\node [anchor=west] at ( -2.2 ,	-9.55-(0.447368421*#5) {#1};
+		\node [anchor=east] at (  2.35,	-9.55-(0.447368421*#5) {#2};
 		\node [anchor=east] at (  3.35,	-9.55-(0.447368421*#5) {#3};
 		\node [anchor=east] at (  6.35,	-9.55-(0.447368421*#5) {#4};
 	}
@@ -186,7 +186,7 @@
 \newcommand{\srGearInnerAdd}[3]{
 	\gappto\srGearPrint{
 		\stepcounter{srGear}
-		\node [anchor=west] at ( -2.1 ,	-14.5-(0.447368421*#3) {#1};
+		\node [anchor=west] at ( -2.2 ,	-14.5-(0.447368421*#3) {#1};
 		\node [anchor=east] at (  6.35,	-14.5-(0.447368421*#3) {#2};
 	}
 
@@ -358,6 +358,25 @@
 	\srAugmentationPrint;
 	\srGearPrint;
 	\srMeleePrint;
+% TODO: Deck
+%
+% Vehicle
+	\node [anchor=west] at ( 8.6 ,	-09.57-(0.447368421*0) {\srVehicleName};
+	\node [anchor=west] at ( 9.3 ,	-09.57-(0.447368421*1) {\textbf{\srVehicleAcc}};
+%	\node [anchor=west] at ( 8.2 ,	-09.57-(0.447368421*2) {\textbf{\srVehiclePilot}};
+	\node [anchor=west] at ( 9.3 ,	-09.57-(0.447368421*2) {\textbf{\srVehiclePilot}};
+%	\node [anchor=west] at ( 8.75 ,	-09.57-(0.447368421*3) {\textbf{\srVehicleArmor}};
+	\node [anchor=west] at ( 9.3 ,	-09.57-(0.447368421*3) {\textbf{\srVehicleArmor}};
+	\node [anchor=west] at ( 12.75,	-09.57-(0.447368421*0) {\textbf{\srVehicleHandling}};
+	\node [anchor=west] at ( 12.75,	-09.57-(0.447368421*1) {\textbf{\srVehicleSpeed}};
+	\node [anchor=west] at ( 12.75,	-09.57-(0.447368421*2) {\textbf{\srVehicleBody}};
+	\node [anchor=west] at ( 12.75,	-09.57-(0.447368421*3) {\textbf{\srVehicleSensor}};
+	\node [anchor=west] at ( 9 ,	-09.57-(0.447368421*4) {\srVehicleNotesA};
+	\node [anchor=west] at ( 7.51 ,	-09.57-(0.447368421*5) {\srVehicleNotesB};
+	\node [anchor=west] at ( 7.51 ,	-09.57-(0.447368421*6) {\srVehicleNotesC};
+
+
+%
 	\srSPRCPrint;
 \end{tikzpicture}
 
