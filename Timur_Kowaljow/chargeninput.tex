@@ -7,7 +7,7 @@
 \newcommand{\srCharacter}{Timur Kowaljow}
 \newcommand{\srPlayer}{mist}
 \newcommand{\srNotes}{ }
-\newcommand{\srVersion}{1.2 \LaTeX}
+\newcommand{\srVersion}{1.3}
 % PERSONAL DATA
 \newcommand{\srPersAlias}{Tim / Jim}
 \newcommand{\srPersMetatype}{Nächtlicher Elf}
@@ -19,8 +19,8 @@
 \newcommand{\srPersStreetcred}{\LaTeX}
 \newcommand{\srPersNotoriety}{2}
 \newcommand{\srPersPublicawareness}{3}
-\newcommand{\srPersKarma}{19}
-\newcommand{\srPersTotalkarma}{94}
+\newcommand{\srPersKarma}{22}
+\newcommand{\srPersTotalkarma}{101}
 \newcommand{\srPersMisc}{schwarzes Fell}
 % ATTRIBUTES
 \newcommand{\srAttrBody}{3}
@@ -57,30 +57,29 @@
 \srSkillAddL{Wurfwaffen (G)}{2}
 \srSkillAddL{$\rightarrow$ Wurfklingen}{+3}
 \srSkillAddL{Klingenwaffen (G - Nahkampf)}{5}
-\srSkillAddL{$\rightarrow$ Parieren}{}
+%\srSkillAddL{$\rightarrow$ Parieren}{}
 \srSkillAddL{Schnellfeuerwaffen (Feuerw.)}{5}
 \srSkillAddL{Gewehre (Feuerwaffen)}{2}
-\srSkillAddL{$\rightarrow$ Scharfschützengewehr}{}
+%\srSkillAddL{$\rightarrow$ Scharfschützengewehr}{}
 \srSkillAddL{Pistolen (Feuerwaffen)}{1}
-\srSkillAddL{Schwere Waffen (G)}{}
+\srSkillAddL{Schwere Waffen (G)}{1}
 \srSkillAddL{Geschütze (G)}{1}
-\srSkillAddL{$\rightarrow$ Feuerwaffen}{}
+%\srSkillAddL{$\rightarrow$ Feuerwaffen}{}
 \srSkillAddL{Waffenloser Kampf (Nahk.)}{1}
 \srSkillAddL{Bodenfahrzeuge (R)}{5}
 \srSkillAddL{Flugzeuge (R)}{1}
+\srSkillAddL{Schiffe (R)}{1}
 
 \srSkillAddR{Verkleiden}{5}
-\srSkillAddR{Survival}{2}
+\srSkillAddR{Survival (W)}{2}
 \srSkillAddR{Wahrnemung (I)}{2}
 \srSkillAddR{Erste Hilfe}{1}
 \srSkillAddR{}{}
 \srSkillAddR{Englisch}{M}
 \srSkillAddR{Russisch}{M}
 \srSkillAddR{Sperethiel}{2}
-\srSkillAddR{Deutsch}{1}
-\srSkillAddR{Polnisch}{1}
-\srSkillAddR{Slowenisch}{1}
-\srSkillAddR{Finnisch}{1}
+\srSkillAddR{Deutsch, Polnisch, Slowenisch,}{}
+\srSkillAddR{Finnisch, Norwegisch, Salish}{1}
 \srSkillAddR{}{}
 \srSkillAddR{Konzernwissen}{1}
 \srSkillAddR{$\rightarrow$ Ares Macrotechnology}{2}
@@ -92,7 +91,7 @@
 
 % IDs/LIFESTYLE/CURRENCY
 \newcommand{\srPrimaryLifestyle}{Mittelschicht}
-\newcommand{\srNuyen}{110.427}
+\newcommand{\srNuyen}{117.967}
 \newcommand{\srLicense}{\LaTeX}
 \srIDAdd{St. \textbf{5} / Unterschicht /
 --- / Reflexbooster; Riggerkontrolle}
@@ -101,8 +100,8 @@
 \srIDAdd{}
 \srIDAdd{Spesen: 12.000 \textyen}
 % CORE COMBAT INFO
-\newcommand{\srCCIArmor}{\LaTeX}
-\newcommand{\srCCIArmorRating}{\TeX}
+\newcommand{\srCCIArmor}{}
+\newcommand{\srCCIArmorRating}{}
 \newcommand{\srCCIRange}{Colt Cobra TZ-120}
 \newcommand{\srCCIRangeDam}{7 K}
 \newcommand{\srCCIRangeAcc}{4(5)}
@@ -127,18 +126,19 @@
 \srQualityAdd{Zweisprachig}{}{V}
 \srQualityAdd{Talentiert}{Klingenwaffen}{V}
 \srQualityAdd{}{}{}
-\srQualityAdd{Schlaflosigkeit}{}{N}
+\srQualityAdd{Schlaflosigkeit}{geist. Schaden: Will+Int (4)}{N}
 \srQualityAdd{Vorurteil}{Konzernführung Ares Macrotechnology, radikal}{N}
 %	Connections
 \srContactsAdd{Lilya 'Lilith 'Pawlutschenko}{5}{1}{}
 \srContactsAdd{Daniil 'Dan' Ivanov (Straßendoc, Seattle)}{1}{3}{}
 \srContactsAdd{Aaron}{1}{?}{}
-\srContactsAdd{Santer}{4}{3}{2}
+\srContactsAdd{Santer (schuldet noch eine ID)}{4}{3}{2}
 \srContactsAdd{Green}{3}{8}{-1}
 \srContactsAdd{Weißfeder}{2}{5}{}
-\srContactsAdd{}{}{}{}
-\srContactsAdd{Frin (Decker), Robert 'Bob' Wrythe (Waffenhändler)}{}{}{}
-
+\srContactsAdd{Ngumbe (Geist)}{3}{2}{}
+\srContactsAdd{Frin (Decker)}{2}{?}{}
+\srContactsAdd{Robert 'Bob' Wrythe (Waffenhändler)}{1}{?}{}
+%\srContactsAdd{}{}{}{}
 
 
 %%%%%%%%%%%%%%%%%%%%
@@ -159,7 +159,7 @@
 	\hline
 	Magazine & je 4 \\
 	\hline
-	Standart & 93 \\
+	Standard & 93 \\
 	Gel &  \\
 	Explosiv & 20 \\
 	APDS & \\
@@ -171,25 +171,26 @@
 	\hline
 	Magazine & 12  \\
 	\hline
-	Standart & 123 \\
+	Standard & 123 \\
 	Gel & 194 \\
 	Explosiv & 3 \\
 	APDS & \\
 	\hline
 \end{tabular}
-\begin{tabular}[]{r | l}
-	\multicolumn{2}{l}{\textbf{Sturmgewehre}}\\
-	\multicolumn{2}{r}{AK-98 (+Granatwerfer)}\\
+\begin{tabular}[]{r | l r} 
+	\multicolumn{3}{l}{\textbf{Sturmgewehre}}\\
+	\multicolumn{2}{r}{AK-98 (+Granatwerfer)} &\\
 	\hline
-	Magazine & 20 \\
+	Magazine & 20 &\\
 	\hline
-	Standart & 75 \\
-	Gel & 120 \\
-	Explosiv & 40 \\
-	APDS & \\
+	Standard & 51 &\\
+	Gel & 120 &\\
+	Explosiv & 94 &\\
+	APDS & 65 &\\
 	\hline
-	Sprenggranaten & 2 \\
-	Schockgranaten & 4 \\
+	Sprenggranaten & 0		& 16K -2/m DK-2 \\
+	Schockgranaten & 4		& 10G 10m \\
+	Splittergranaten & 2	& 18K -1/m DK+5 \\
 	\hline
 \end{tabular}
 
@@ -200,7 +201,7 @@
 	\hline
 	Magazine & 16 \\
 	\hline
-	Standart & 112 \\
+	Standard & 109 \\
 	Gel &  \\
 	Explosiv &  \\
 	APDS & 20 \\
@@ -256,7 +257,7 @@ Raketenwerfer Splittergranaten
 \section*{Loot}
 \begin{itemize}
 	\item Vollpanzerung  (Rocky Mountain Tarn)\\
-		Vollhelm (Sichtgerät Kap. 6)
+		Vollhelm (Kap. 6)
 		\begin{itemize}
 			\item Restlichtverstärkung
 			\item Blitzkompensation
@@ -269,26 +270,28 @@ Raketenwerfer Splittergranaten
 	\item Sturmschrotflinte
 	\item Kommlink Stufe 1 + Subvokalmikro
 	\item Colt M23 (Sturmgewehr) + 3 Streifen Std.-Muni.
+	\item Unterarmschnappklinge
 \end{itemize}
 \vphantom{2cm}
 
+\section*{Notes}
+\begin{itemize}
+	\item Restlichverstärkung in Elfen eingebaut
+	\item Kaufen
+		\begin{itemize}
+			\item Kontaktlinsen (3)
+				\begin{itemize}	
+					\item Bildverbindung
+					\item Infrarotsicht
+					\item Smartlink
+				\end{itemize}
+			\item Sichtgerät (6) \& in Helm von Motorrad einbauen
+				\begin{itemize}
+					\item Sichtverbesserung
+				\end{itemize}
+			\item Lizenz für Colt Cobra TZ-120 und Steyr TMP und Ceska Black Scorpion
+		\end{itemize}
+\end{itemize}
 \end{multicols}
 
 }
-
-%Notes:
-%  Restlichverstärkung in Elfen eingebaut
-% Kontaktlinsen (3) kaufen
-%  Bildverbindung
-%  Infrarotsicht
-%  Smartlink
-%  
-% Sichtgerät (6) kaufen & in Vollhelm von Vollpanzerung einbauen
-%  Blitzkompensation
-%  Sichtverbesserung
-%  Sichtvergrößerung
-% Sichtgerät (6) kaufen & in Helm von Motorrad einbauen
-%  Sichtverbesserung
-%
-% Kaufen:
-% Lizenz für Colt Cobra TZ-120 und Steyr TMP und Ceska Black Scorpion
