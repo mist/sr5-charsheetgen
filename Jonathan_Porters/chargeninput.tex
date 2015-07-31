@@ -1,0 +1,244 @@
+% vim: ft=tex
+
+%%%%%%%%%%%%%%%%%%%%
+%%    PAGE ONE    %%
+%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\srCharacter}{Junior Detective Jonathan Porters}
+\newcommand{\srPlayer}{mist}
+\newcommand{\srNotes}{Knight Errant Angestellter}
+\newcommand{\srVersion}{0.9 $\beta$}
+% PERSONAL DATA
+\newcommand{\srPersAlias}{Junior Detective Jonathan Porters / Detective Porters / Jon}
+\newcommand{\srPersMetatype}{Elf}
+\newcommand{\srPersEthnicity}{}
+\newcommand{\srPersAge}{21}
+\newcommand{\srPersSex}{\male}
+\newcommand{\srPersHeight}{}
+\newcommand{\srPersWeight}{}
+\newcommand{\srPersStreetcred}{--}
+\newcommand{\srPersNotoriety}{1}
+\newcommand{\srPersPublicawareness}{--}
+\newcommand{\srPersKarma}{25}
+\newcommand{\srPersTotalkarma}{}
+\newcommand{\srPersMisc}{}
+% ATTRIBUTES
+\newcommand{\srAttrBody}{3}
+\newcommand{\srAttrAgility}{4}
+\newcommand{\srAttrReaction}{4}
+\newcommand{\srAttrStrength}{3}
+\newcommand{\srAttrWillpower}{4}
+\newcommand{\srAttrLogic}{7}
+\newcommand{\srAttrIntuition}{5}
+\newcommand{\srAttrCharisma}{4}
+\newcommand{\srAttrEdge}{4}
+\newcommand{\srAttrEdgeMax}{ }
+\newcommand{\srAttrEssence}{6}
+\newcommand{\srAttrMagicResonance}{---}
+\newcommand{\srAttrInitiative}{9+1W6}
+\newcommand{\srAttrInitiativeMatrix}{---}
+\newcommand{\srAttrInitiativeAstral}{---}
+\newcommand{\srAttrComposure}{8}
+\newcommand{\srAttrJudgeIntentions}{9}
+\newcommand{\srAttrMemory}{11}
+\newcommand{\srAttrLiftCarry}{6}
+\newcommand{\srAttrMovement}{8 / 16 / $+2 \frac{m}{\mathrm{Erfolg}}$}
+\newcommand{\srAttrLimitPhysical}{5}
+\newcommand{\srAttrLimitMental}{8}
+\newcommand{\srAttrLimitSocial}{6}
+% SKILLS
+\srSkillAddL{Pistolen}{3}
+\srSkillAddL{Waffenloser Kampf}{2}
+\srSkillAddL{Sprengstoffe}{3}
+\srSkillAddL{$\rightarrow$ Entschärfen}{+2}
+\srSkillAddL{}{}
+\srSkillAddL{Laufen (S) ($\frac{\mathrm{max. }1}{\mathrm{Kampfr.}}$)}{2}
+\srSkillAddL{Schleichen}{3}
+\srSkillAddL{Bodenfahrzeuge}{3}
+\srSkillAddL{}{}
+\srSkillAddL{Wahrnehmung}{4}
+\srSkillAddL{Erste Hilfe}{4}
+\srSkillAddL{Gebräuche}{3}
+\srSkillAddL{}{}
+\srSkillAddL{Elektronikgruppe (Computer,}{3}
+\srSkillAddL{~ ~ Hardware, Software - L)}{}
+\srSkillAddL{Mechanikgruppe (Fahrzeug\textasciitilde,}{2}
+\srSkillAddL{~ ~ Industrie\textasciitilde, Luftfahrt\textasciitilde, Seefahrt\textasciitilde)}{}
+\srSkillAddL{Schlosser}{3}
+\srSkillAddL{Waffenbau}{3}
+\srSkillAddL{Fälschen}{3}
+\srSkillAddL{}{}
+
+\srSkillAddR{}{}
+\srSkillAddR{}{}
+\srSkillAddR{}{}
+\srSkillAddR{}{}
+\srSkillAddR{}{}
+\srSkillAddR{}{}
+\srSkillAddR{}{}
+\srSkillAddR{\textbf{Sprachen}}{}
+\srSkillAddR{Englisch}{M}
+\srSkillAddR{Japanisch}{2}
+\srSkillAddR{Spanisch}{1}
+\srSkillAddR{\textbf{Wissen}}{}
+\srSkillAddR{Psychologie}{4}
+\srSkillAddR{Politik}{3}
+\srSkillAddR{Recht}{3}
+\srSkillAddR{Geschichte}{3}
+\srSkillAddR{Organisiertes Verbrechen}{3}
+\srSkillAddR{Japanische Philosophen }{2}
+\srSkillAddR{Magietheorie}{2}
+\srSkillAddR{Taktik kleiner Einheiten}{2}
+%\srSkillAddR{<+Name+>}{<+Wert+>}j
+% \srSkillAddR{<+Name+>}{<+Wert+>}
+
+% IDs/LIFESTYLE/CURRENCY
+\newcommand{\srPrimaryLifestyle}{Mittelschicht (Aktuell: Unterschicht, beengt)}
+\newcommand{\srNuyen}{}
+\newcommand{\srLicense}{}
+%\srIDAdd{St. \textbf{5} / Unterschicht /
+%--- / Reflexbooster; Riggerkontrolle}
+\srIDAdd{}
+\srIDAdd{}
+\srIDAdd{}
+% CORE COMBAT INFO
+\newcommand{\srCCIArmor}{}
+\newcommand{\srCCIArmorRating}{}
+\newcommand{\srCCIRange}{}
+\newcommand{\srCCIRangeDam}{}
+\newcommand{\srCCIRangeAcc}{}
+\newcommand{\srCCIRangeAP}{}
+\newcommand{\srCCIRangeMode}{}
+\newcommand{\srCCIRangeRC}{}
+\newcommand{\srCCIRangeAmmo}{}
+\newcommand{\srCCIMelee}{}
+\newcommand{\srCCIMeleeReach}{}
+\newcommand{\srCCIMeleeDam}{}
+\newcommand{\srCCIMeleeAcc}{}
+\newcommand{\srCCIMeleeAP}{}
+\newcommand{\srCCISecMelee}{}
+\newcommand{\srCCISecMeleeReach}{}
+\newcommand{\srCCISecMeleeDam}{}
+\newcommand{\srCCISecMeleeAcc}{}
+\newcommand{\srCCISecMeleeAP}{}
+%\newcommand{\sr<+CMD+>}{<+CONT+>}
+%	TODO: CONDITION MONITOR
+%	QUALITIES
+\srQualityAdd{Analytischer Geist (5)}{\begin{minipage}[t]{4.5cm}\tiny +2 auf Logikproben $\in$ (Erkennen von Mustern, Analysieren oder Finden von Hinweisen, Lösen von Rätseln)\end{minipage}}{V}
+\srQualityAdd{Außergewöhnliches Attribut (14)}{(Logik)}{V}
+\srQualityAdd{}{}{}
+
+\srQualityAdd{Auffälliger Stil (5)}{}{N}
+\srQualityAdd{Händezittern (7)}{\begin{minipage}[t]{4.5cm}\tiny Geschicklichkeit -2 WENN Symptome \\ Erlebnis $\Rightarrow$ Gesch. + Konst. (4) $\Rightarrow$ Symptome\end{minipage}}{N}
+\srQualityAdd{Schwaches Immunsystem (10)}{\begin{minipage}[t]{4.5cm}\tiny Kraft v. Krankheit +2 bei Widerstandsprobe \\ Schlechter Ruf +1\end{minipage}}{N}
+%\srQualityAdd{Vorurteil}{Konzernführung Ares Macrotechnology, radikal}{N}
+%	Connections
+\srConnectionAdd{}{}{}{}
+
+
+
+%%%%%%%%%%%%%%%%%%%%
+%%    PAGE TWO    %%
+%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%
+%%   PAGE THREE   %%
+%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\PageThree}{
+
+\section*{Waffenmodifikatoren und Munition}
+
+\begin{tabular}[<+position+>]{r | l}
+	\multicolumn{2}{l}{\textbf{Automatikpistole} }\\
+	\multicolumn{2}{r}{~}\\
+	\hline
+	Magazine &  \\
+	\hline
+	Standart &  \\
+	Gel &  \\
+	Explosiv &  \\
+	APDS & \\
+	\hline
+\end{tabular}
+\begin{tabular}[<+position+>]{r | l}
+	\multicolumn{2}{l}{\textbf{Maschinenpistole}}\\
+	\multicolumn{2}{r}{~}\\
+	\hline
+	Magazine &   \\
+	\hline
+	Standard &  \\
+	Gel &  \\
+	Explosiv &  \\
+	APDS & \\
+	\hline
+\end{tabular}
+\begin{tabular}[]{r | l}
+	\multicolumn{2}{l}{\textbf{Sturmgewehre}}\\
+	\multicolumn{2}{r}{~}\\
+	\hline
+	Magazine &  \\
+	\hline
+	Standard &  \\
+	Gel &  \\
+	Explosiv &  \\
+	APDS & \\
+	\hline
+\end{tabular}
+
+
+\begin{tabular}[]{r | l}
+	\multicolumn{2}{l}{\textbf{Scharfschützengewehr}}\\
+	\multicolumn{2}{r}{~}\\
+	\hline
+	Magazine &  \\
+	\hline
+	Standard &  \\
+	Gel &  \\
+	Explosiv &  \\
+	APDS &  \\
+	\hline
+\end{tabular}
+\begin{tabular}[]{r | l}
+	\multicolumn{2}{l}{\textbf{Injektionspfeile}}\\
+	\multicolumn{2}{r}{Parashield ~}\\
+	\hline
+	Pfeile &  \\
+	Pfeile mit Narcojet &  \\
+	\hline
+\end{tabular}
+
+
+\begin{multicols}{2}
+
+\section*{Waffenmodifikationen und -zubehör}
+\begin{itemize}
+	\item ~
+\end{itemize}
+
+
+\section*{Loot}
+\begin{itemize}
+	\item ~
+\end{itemize}
+
+\end{multicols}
+
+}
+
+%Notes:
+%  Restlichverstärkung in Elfen eingebaut
+% Kontaktlinsen (3) kaufen
+%  Bildverbindung
+%  Infrarotsicht
+%  Smartlink
+%  
+% Sichtgerät (6) kaufen & in Vollhelm von Vollpanzerung einbauen
+%  Blitzkompensation
+%  Sichtverbesserung
+%  Sichtvergrößerung
+% Sichtgerät (6) kaufen & in Helm von Motorrad einbauen
+%  Sichtverbesserung
+%
+% Kaufen:
+% Lizenz für Colt Cobra TZ-120 und Steyr TMP und Ceska Black Scorpion
