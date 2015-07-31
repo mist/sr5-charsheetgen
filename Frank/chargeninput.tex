@@ -7,7 +7,7 @@
 \newcommand{\srCharacter}{Arbeitstitel}
 \newcommand{\srPlayer}{mist}
 \newcommand{\srNotes}{}
-\newcommand{\srVersion}{1.1}
+\newcommand{\srVersion}{1.2}
 % PERSONAL DATA
 \newcommand{\srPersAlias}{Frank}
 \newcommand{\srPersMetatype}{Mensch}
@@ -37,7 +37,7 @@
 \newcommand{\srAttrMagicResonance}{6}
 \newcommand{\srAttrInitiative}{9 + 1W6}
 \newcommand{\srAttrInitiativeMatrix}{}
-\newcommand{\srAttrInitiativeAstral}{10 + 2W6}
+\newcommand{\srAttrInitiativeAstral}{12 + 2W6}
 \newcommand{\srAttrComposure}{11}
 \newcommand{\srAttrJudgeIntentions}{11}
 \newcommand{\srAttrMemory}{10}
@@ -56,18 +56,16 @@
 \srSkillAddL{Spurenlesen (I - Natur)}{2}
 \srSkillAddL{Survival (W - Natur)}{2}
 \srSkillAddL{}{}
-\srSkillAddL{Wurfwaffen}{2}
-\srSkillAddL{Klingenwaffen}{2}
-\srSkillAddL{}{}
 \srSkillAddL{Englisch}{M}
 \srSkillAddL{Sioux-Dialekt}{3}
 \srSkillAddL{Deutsch}{1}
 \srSkillAddL{}{}
 \srSkillAddL{Magietheorie}{6}
 \srSkillAddL{Critter}{4}
-\srSkillAddL{Native American Nations}{5}
+\srSkillAddL{Native American Nations}{2}
 \srSkillAddL{$\rightarrow$ Sioux-Nation}{+2}
 \srSkillAddL{Schmuggelrouten Seattle}{2}
+\srSkillAddL{Taktik kleiner Einheiten}{3}
 %\srSkillAddL{<+Name+>}{<+Wert+>}
 
 \srSkillAddR{Spruchzauberei (M - Hex.)}{6}
@@ -77,7 +75,9 @@
 \srSkillAddR{Verbannen (M - Beschw.)}{3}
 \srSkillAddR{Binden (M-Beschw.)}{3}
 \srSkillAddR{}{}
-
+\srSkillAddR{Wurfwaffen}{2}
+\srSkillAddR{Klingenwaffen}{2}
+\srSkillAddR{}{}
 \srSkillAddR{Wahrnehmen (I)}{3}
 \srSkillAddR{Einschüchtern (C)}{3}
 \srSkillAddR{Verhandlung (C - Einfluss)}{4}
@@ -86,8 +86,8 @@
 %\srSkillAddR{<+Name+>}{<+Wert+>}
 
 % IDs/LIFESTYLE/CURRENCY
-\newcommand{\srPrimaryLifestyle}{ Unterschicht$+$ (Miete: \sout{18.4.}, 18.5.) }
-\newcommand{\srNuyen}{4000}
+\newcommand{\srPrimaryLifestyle}{ Unterschicht \textcircled{+} (Miete: \sout{} 18.4., 18.5.) }
+\newcommand{\srNuyen}{900}
 \newcommand{\srLicense}{}
 %\srIDAdd{St. \textbf{5} / Unterschicht /
 %--- / Reflexbooster; Riggerkontrolle}
@@ -133,16 +133,45 @@
 %\srQualityAdd{Schwaches Immunsystem (10)}{\begin{minipage}[t]{4.5cm}\tiny Kraft v. Krankheit +2 bei Widerstandsprobe \\ Schlechter Ruf +1\end{minipage}}{N}
 %\srQualityAdd{Vorurteil}{Konzernführung Ares Macrotechnology, radikal}{N}
 %	Connections
-\srConnectionAdd{(Schmuggler)}{3}{3}{}
-\srConnectionAdd{(Taliskrämer)}{2}{1}{}
-\srConnectionAdd{(Stammesangehörige)}{6}{0}{}
-\srConnectionAdd{(Typ der mir Histamin besorgen wollte (via Schmuggler))}{0}{0}{}
-
-
+\srContactsAdd{(Schmuggler)}{3}{3}{}
+\srContactsAdd{(Taliskrämer)}{2}{1}{}
+\srContactsAdd{(Stammesangehörige)}{6}{0}{}
+\srContactsAdd{(unbek. Typ mit Histamin (via Schmuggler))}{0}{0}{}
 
 %%%%%%%%%%%%%%%%%%%%
 %%    PAGE TWO    %%
 %%%%%%%%%%%%%%%%%%%%
+
+%\srRangedAdd{<+name+>}{<+dammage+>}{<+acc+>}{<+AP+>}{<+mode+>}{<+rc+>}{<+ammo+>}
+\srRangedAdd{Tomahawk}{(Stk+1)K}{5}{-1}{--}{--}{--}
+\srRangedAdd{Tomahawk}{(Stk+1)K}{5}{-1}{--}{--}{--}
+
+%\srArmorAdd{<+name+>}{<+rating+>}{<+notes+>}
+\srArmorAdd{Panzerjacke}{12}{}
+
+%\srAugmentationAdd{<+name+>}{<+rating+>}{<+notes+>}{<+essence+>}
+\srAugmentationAdd{Name}{Rating}{Notizen}{Essenceverlust}
+
+%\srGearAdd{<+name+>}{<+rating+>}
+\srGearAdd{Kommlink:; Renraku Sensei}{3}
+\srGearAdd{~$\rightarrow$Subvokalmikrophon}{}
+\srGearAdd{Monokel (Bildverb., Sichtverb. 2, Sichtverg.}{4}
+\srGearAdd{Anzug (Hemd, Krawatte, Jacket, \ldots)}{500 \textyen}
+\srGearAdd{}{}
+\srGearAdd{2$\times$Tomahawk (wie Cav. Arms. Vib Tr. To, ein Schaden weniger)}{}
+\srGearAdd{}{}
+\srGearAdd{150$\times$ Dram}{}
+
+%\srSPRCAdd{<+SPRC+>}{<+type/target+>}{<+range+>}{<+duration+>}{<+drain+>}
+\srSPRCAdd{Heilen ~~~ ~ ~ (Essenz!)}{M}{B}{P}{KS$-$4}
+\srSPRCAdd{Verbesserte Unsichtbarkeit}{P}{BF}{A}{KS$-$1}
+\srSPRCAdd{Chaotische Welt}{P}{BF(F)}{A}{KS}
+\srSPRCAdd{Manaball}{M}{BF(F)}{S}{KS}
+\srSPRCAdd{Mobkontrolle}{M}{BF(F)}{A}{KS$+$1}
+\srSPRCAdd{Levitieren}{P}{BF}{A}{KS$-$2}
+
+%\srRangedAdd{<+name+>}{<+reach+>}{<+dammage+>}{<+acc+>}{<+AP+>}
+\srMeleeAdd{Tomahawk}{\begin{minipage}[t]{1.1cm}\tiny  2~/~~4~/~~6~/~10 \\ 0~/~-1~/~-3~/~-6 \end{minipage}}{(Str+1)K}{5}{DK}
 
 %%%%%%%%%%%%%%%%%%%%
 %%   PAGE THREE   %%
