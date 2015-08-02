@@ -7,7 +7,7 @@
 \newcommand{\srCharacter}{Timur Kowaljow}
 \newcommand{\srPlayer}{mist}
 \newcommand{\srNotes}{ }
-\newcommand{\srVersion}{1.3}
+\newcommand{\srVersion}{1.3.1}
 % PERSONAL DATA
 \newcommand{\srPersAlias}{Tim / Jim}
 \newcommand{\srPersMetatype}{Nächtlicher Elf}
@@ -16,28 +16,28 @@
 \newcommand{\srPersSex}{\male}
 \newcommand{\srPersHeight}{1,92}
 \newcommand{\srPersWeight}{85}
-\newcommand{\srPersStreetcred}{\LaTeX}
+\newcommand{\srPersStreetcred}{}
 \newcommand{\srPersNotoriety}{2}
 \newcommand{\srPersPublicawareness}{3}
-\newcommand{\srPersKarma}{22}
-\newcommand{\srPersTotalkarma}{101}
+\newcommand{\srPersKarma}{34}
+\newcommand{\srPersTotalkarma}{113}
 \newcommand{\srPersMisc}{schwarzes Fell}
 % ATTRIBUTES
-\newcommand{\srAttrBody}{4}
+\newcommand{\srAttrBody}{2}
 \newcommand{\srAttrAgility}{7}
 \newcommand{\srAttrReaction}{5 (+1)}
 \newcommand{\srAttrStrength}{5}
 \newcommand{\srAttrWillpower}{3}
 \newcommand{\srAttrLogic}{4}
-\newcommand{\srAttrIntuition}{5}
-\newcommand{\srAttrCharisma}{3}
+\newcommand{\srAttrIntuition}{6}
+\newcommand{\srAttrCharisma}{2}
 \newcommand{\srAttrEdge}{2}
 \newcommand{\srAttrEdgeMax}{6}
 \newcommand{\srAttrEssence}{2,8}
-\newcommand{\srAttrMagicResonance}{\LaTeX}
+\newcommand{\srAttrMagicResonance}{}
 \newcommand{\srAttrInitiative}{11+1W6 (12+2W6)}
-\newcommand{\srAttrInitiativeMatrix}{\LaTeX}
-\newcommand{\srAttrInitiativeAstral}{\LaTeX}
+\newcommand{\srAttrInitiativeMatrix}{}
+\newcommand{\srAttrInitiativeAstral}{}
 \newcommand{\srAttrComposure}{6}
 \newcommand{\srAttrJudgeIntentions}{9}
 \newcommand{\srAttrMemory}{7}
@@ -90,15 +90,15 @@
 \srSkillAddR{Typische russ. Speisen}{2}
 
 % IDs/LIFESTYLE/CURRENCY
-\newcommand{\srPrimaryLifestyle}{Mittelschicht}
-\newcommand{\srNuyen}{117.967}
-\newcommand{\srLicense}{\LaTeX}
-\srIDAdd{St. \textbf{5} / Unterschicht /
---- / Reflexbooster; Riggerkontrolle}
-\srIDAdd{}
-\srIDAdd{}
-\srIDAdd{}
-\srIDAdd{Spesen: 12.000 \textyen}
+\newcommand{\srPrimaryLifestyle}{Oberschicht (lebenslang, südliches Bellevue, s.u., 4ZKB+Speisekammer) }
+\newcommand{\srNuyen}{179.967}
+\newcommand{\srLicense}{}
+\srIDAdd{St. \textbf{?} / Oberschicht, s.o. / --- / Reflexbooster; Riggerkontrolle / Jonathan Bride }
+\srIDAdd{St. \textbf{5} / Unterschicht / --- / Reflexbooster; Riggerkontrolle}
+%\srIDAdd{}
+%\srIDAdd{}
+%\srIDAdd{}
+%\srIDAdd{Spesen: 12.000 \textyen}
 % CORE COMBAT INFO
 \newcommand{\srCCIArmor}{}
 \newcommand{\srCCIArmorRating}{}
@@ -125,9 +125,13 @@
 \srQualityAdd{Rennpilot}{}{V}
 \srQualityAdd{Zweisprachig}{}{V}
 \srQualityAdd{Talentiert}{Klingenwaffen}{V}
+\srQualityAdd{``Keen-eared''}{+1 auf Hören-Proben}{V}
 \srQualityAdd{}{}{}
 \srQualityAdd{Schlaflosigkeit}{geist. Schaden: Will+Int (4)}{N}
 \srQualityAdd{Vorurteil}{Konzernführung Ares Macrotechnology, radikal}{N}
+\srQualityAdd{Allergie}{Sonnenlicht, Mild}{N}
+\srQualityAdd{``Norcurnal''}{-1 auf geistige Würfe bei Tag}{N}
+\srQualityAdd{``Unusual Hair''}{+1 auf aufgespürt-werden (matrix und real)}{}
 %	Connections
 \srContactsAdd{Lilya 'Lilith 'Pawlutschenko}{5}{1}{}
 \srContactsAdd{Daniil 'Dan' Ivanov (Straßendoc, Seattle)}{1}{3}{}
@@ -161,7 +165,7 @@
 \srArmorAdd{Panzerweste ($\times2$)}{9}{}
 \srArmorAdd{Helm}{+2}{Motorradhelm}
 \srArmorAdd{Ganzkörperpanzerung + Vollhelm}{15+3}{Rocky Mountain Flecktarn, Kap. 6}
-\srArmorAdd{Catsuit}{3}{schwarz, Latexartig}
+\srArmorAdd{Catsuit}{3}{schwarz, latexartig}
 %\srArmorAdd{<+name+>}{<+rating+>}{<+notes+>}
 
 \srAugmentationAdd{Reflexbooster}{1}{gebraucht}{2,5}
@@ -181,7 +185,8 @@
 \srGearAdd{Taschenlampe, Survivalkit}{}
 \srGearAdd{Medkit}{3}
 \srGearAdd{Kommlink Erika Elite}{4}
-\srGearAdd{Kommlink}{1}
+\srGearAdd{Kommlink Sony Emperor}{2}
+\srGearAdd{Kommlink Meta Link}{1}
 \srGearAdd{Brille (Bildverb., Infrarotsicht)}{2}
 \srGearAdd{Brille (Bildverb., Infrarots., Restlichtv.)}{4}
 \srGearAdd{BTL (30$\times$Moodchip, 10$\times$Dreamchip)}{}
@@ -318,6 +323,11 @@ Raketenwerfer Splittergranaten
 			\item Schalldämpfer
 			\item „Aktenkoffer“
 		\end{itemize}
+	\item AK-98 (2$\times$)
+		\begin{enumerate}
+			\item Ohne Granatwerfer; nur Einzelschuss; 8K; Präz. 3
+			\item normal, jedoch komplett deaktivierbare Elektronik; funktioniert auch im nichtelektrischen Raum
+		\end{enumerate}
 	\item Colt Cobra TZ-120
 		\begin{itemize}
 			\item Schalldämpfer
