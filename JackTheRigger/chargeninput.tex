@@ -1,0 +1,245 @@
+% vim: ft=tex
+
+%%%%%%%%%%%%%%%%%%%%
+%%    PAGE ONE    %%
+%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\srCharacter}{Jack The Rigger}
+\newcommand{\srPlayer}{mist}
+\newcommand{\srNotes}{<+notes+>}
+\newcommand{\srVersion}{0.1}
+% PERSONAL DATA
+\newcommand{\srPersAlias}{Jack The Rigger}
+\newcommand{\srPersMetatype}{Mensch}
+\newcommand{\srPersEthnicity}{Europide}
+\newcommand{\srPersAge}{22}
+\newcommand{\srPersSex}{\male}
+\newcommand{\srPersHeight}{179}
+\newcommand{\srPersWeight}{79}
+\newcommand{\srPersStreetcred}{0}
+\newcommand{\srPersNotoriety}{0}
+\newcommand{\srPersPublicawareness}{0}
+\newcommand{\srPersKarma}{}
+\newcommand{\srPersTotalkarma}{}
+\newcommand{\srPersMisc}{}
+% ATTRIBUTES
+\newcommand{\srAttrBody}{3}
+\newcommand{\srAttrAgility}{1}
+\newcommand{\srAttrReaction}{5}
+\newcommand{\srAttrStrength}{1}
+\newcommand{\srAttrWillpower}{5}
+\newcommand{\srAttrLogic}{7}
+\newcommand{\srAttrIntuition}{5}
+\newcommand{\srAttrCharisma}{4}
+\newcommand{\srAttrEdge}{2}
+\newcommand{\srAttrEdgeMax}{7}
+\newcommand{\srAttrEssence}{3,9}
+\newcommand{\srAttrMagicResonance}{}
+\newcommand{\srAttrInitiative}{10+1W6}
+\newcommand{\srAttrInitiativeMatrix}{10+3W6 / 10+4W6}
+\newcommand{\srAttrInitiativeAstral}{}
+\newcommand{\srAttrComposure}{9}
+\newcommand{\srAttrJudgeIntentions}{9}
+\newcommand{\srAttrMemory}{12}
+\newcommand{\srAttrLiftCarry}{4}
+\newcommand{\srAttrMovement}{ 2 / 4 / $ +2 \frac{m}{\mathrm{Erfolg}}$}
+\newcommand{\srAttrLimitPhysical}{4}
+\newcommand{\srAttrLimitMental}{8}
+\newcommand{\srAttrLimitSocial}{6}
+% SKILLS
+\srSkillAddL{Geschütze (G/L)}{6}
+\srSkillAddL{$\rightarrow$ Feuerwaffen}{+2}
+\srSkillAddL{Pistolen (G)}{<+Wert+>}
+\srSkillAddL{Sturmgewehr (G)}{<+Wert+>}
+\srSkillAddL{}{}
+\srSkillAddL{Bodenfahrzeuge (R)}{}
+\srSkillAddL{Gebräuche (C)}{<+Wert+>}
+\srSkillAddL{}{}
+\srSkillAddL{Elektron. Kriegsführung (L)}{<+Wert+>}
+\srSkillAddL{Hardware}{<+Wert+>}
+\srSkillAddL{Software}{<+Wert+>}
+\srSkillAddL{}{}
+\srSkillAddL{Fahrzeugmechanik}{5}
+\srSkillAddL{Industriemechanik}{5}
+\srSkillAddL{Luftfahrtmechanik}{5}
+\srSkillAddL{Seefahrtmechanik}{5}
+%\srSkillAddL{<+Name+>}{<+Wert+>}
+
+\srSkillAddR{Englisch}{M}
+\srSkillAddR{}{}
+\srSkillAddR{<+Name+>}{<+Wert+>}
+\srSkillAddR{<+Name+>}{<+Wert+>}
+\srSkillAddR{<+Name+>}{<+Wert+>}
+\srSkillAddR{<+Name+>}{<+Wert+>}
+\srSkillAddR{<+Name+>}{<+Wert+>}
+\srSkillAddR{<+Name+>}{<+Wert+>}
+\srSkillAddR{<+Name+>}{<+Wert+>}
+\srSkillAddR{<+Name+>}{<+Wert+>}
+\srSkillAddR{<+Name+>}{<+Wert+>}
+\srSkillAddR{<+Name+>}{<+Wert+>}
+%\srSkillAddR{<+Name+>}{<+Wert+>}
+
+% IDs/LIFESTYLE/CURRENCY
+\newcommand{\srPrimaryLifestyle}{Squatter (Miete: \sout{Abenteuerbeginn} )}
+\newcommand{\srNuyen}{<+nuyen+>}
+\newcommand{\srLicense}{}
+%\srIDAdd{St. \textbf{5} / Unterschicht /
+%--- / Reflexbooster; Riggerkontrolle}
+\srIDAdd{}
+\srIDAdd{}
+\srIDAdd{}
+% CORE COMBAT INFO
+\newcommand{\srCCIArmor}{<++>}
+\newcommand{\srCCIArmorRating}{<++>}
+\newcommand{\srCCIRange}{<++>}
+\newcommand{\srCCIRangeDam}{<++>}
+\newcommand{\srCCIRangeAcc}{<++>}
+\newcommand{\srCCIRangeAP}{<++>}
+\newcommand{\srCCIRangeMode}{<++>}
+\newcommand{\srCCIRangeRC}{<++>}
+\newcommand{\srCCIRangeAmmo}{<++>}
+\newcommand{\srCCIMelee}{<++>}
+\newcommand{\srCCIMeleeReach}{<++>}
+\newcommand{\srCCIMeleeDam}{<++>}
+\newcommand{\srCCIMeleeAcc}{<++>}
+\newcommand{\srCCIMeleeAP}{<++>}
+\newcommand{\srCCISecMelee}{<++>}
+\newcommand{\srCCISecMeleeReach}{<++>}
+\newcommand{\srCCISecMeleeDam}{<++>}
+\newcommand{\srCCISecMeleeAcc}{<++>}
+\newcommand{\srCCISecMeleeAP}{<++>}
+%\newcommand{\sr<+CMD+>}{<+CONT+>}
+%	TODO: CONDITION MONITOR
+%	QUALITIES
+\srQualityAdd{Black Market Pipeline (Dronen)}{\begin{minipage}[t]{3.8cm}\tiny -10\% Preis, +2W6 Verfügbarkeit \\ Verkaufspreis +40\%\end{minipage}}{-10}
+\srQualityAdd{Außergewöhnl. Attribut (Logik)}{}{-14}
+%\srQualityAdd{<+name+>}{\begin{minipage}[t]{4.5cm}\tiny <+description+>)\end{minipage}}{<+Value+>}
+\srQualityAdd{}{}{}
+
+%	Contacts
+\srContactsAdd{}{}{}{}
+
+
+
+%%%%%%%%%%%%%%%%%%%%
+%%    PAGE TWO    %%
+%%%%%%%%%%%%%%%%%%%%
+
+\srRangedAdd{<+name+>}{<+dammage+>}{<+acc+>}{<+AP+>}{<+mode+>}{<+rc+>}{<+ammo+>}
+%\srRangedAdd{<+name+>}{<+dammage+>}{<+acc+>}{<+AP+>}{<+mode+>}{<+rc+>}{<+ammo+>}
+
+\srArmorAdd{<+name+>}{<+rating+>}{<+notes+>}
+%\srArmorAdd{<+name+>}{<+rating+>}{<+notes+>}
+
+\srAugmentationAdd{<+name+>}{<+rating+>}{<+notes+>}{<+essence+>}
+%\srAugmentationAdd{<+name+>}{<+rating+>}{<+notes+>}{<+essence+>}
+
+\srGearAdd{<+name+>}{<+rating+>}
+%\srGearAdd{<+name+>}{<+rating+>}
+
+%\srMeeleeAdd{<+name+>}{<+reach+>}{<+dammage+>}{<+acc+>}{<+AP+>}
+%\srMeeleeAdd{<+name+>}{<+reach+>}{<+dammage+>}{<+acc+>}{<+AP+>}
+%\srMeleeAdd{Tomahawk}{\begin{minipage}[t]{1.1cm}\tiny  2~/~~4~/~~6~/~10 \\ 0~/~-1~/~-3~/~-6 \end{minipage}}{(Str+1)K}{5}{DK}
+
+\newcommand{\srVehicleName}{<+cont+>}
+\newcommand{\srVehicleAcc}{<+cont+>}
+\newcommand{\srVehiclePilot}{<+cont+>}
+\newcommand{\srVehicleArmor}{<+cont+>}
+\newcommand{\srVehicleHandling}{<+cont+>}
+\newcommand{\srVehicleSpeed}{<+cont+>}
+\newcommand{\srVehicleBody}{<+cont+>}
+\newcommand{\srVehicleSensor}{<+cont+>}
+\newcommand{\srVehicleNotesA}{<+cont+>}
+\newcommand{\srVehicleNotesB}{<+cont+>}
+\newcommand{\srVehicleNotesC}{<+cont+>}
+
+\srSPRCAdd{<+SPRC+>}{<+type/target+>}{<+range+>}{<+duration+>}{<+drain+>}
+%\srSPRCAdd{<+SPRC+>}{<+type/target+>}{<+range+>}{<+duration+>}{<+drain+>}
+
+%\srSPRCAdd{\textbf{\underline{Kleidung}}}{}{}{\textbf{Anzahl}}{\textbf{Einzelpreis}}
+%\srSPRCAdd{<+name+>}{}{}{<++>}{<+preis+> \textyen}
+
+%%%%%%%%%%%%%%%%%%%%
+%%   PAGE THREE   %%
+%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\PageThree}{
+
+\section*{Waffenmodifikatoren und Munition}
+
+\begin{tabular}[<+position+>]{r | l}
+	\multicolumn{2}{l}{\textbf{Automatikpistole} }\\
+	\multicolumn{2}{r}{~}\\
+	\hline
+	Magazine &  \\
+	\hline
+	Standart &  \\
+	Gel &  \\
+	Explosiv &  \\
+	APDS & \\
+	\hline
+\end{tabular}
+\begin{tabular}[<+position+>]{r | l}
+	\multicolumn{2}{l}{\textbf{Maschinenpistole}}\\
+	\multicolumn{2}{r}{~}\\
+	\hline
+	Magazine &   \\
+	\hline
+	Standard &  \\
+	Gel &  \\
+	Explosiv &  \\
+	APDS & \\
+	\hline
+\end{tabular}
+\begin{tabular}[]{r | l}
+	\multicolumn{2}{l}{\textbf{Sturmgewehre}}\\
+	\multicolumn{2}{r}{~}\\
+	\hline
+	Magazine &  \\
+	\hline
+	Standard &  \\
+	Gel &  \\
+	Explosiv &  \\
+	APDS & \\
+	\hline
+\end{tabular}
+
+
+\begin{tabular}[]{r | l}
+	\multicolumn{2}{l}{\textbf{Scharfschützengewehr}}\\
+	\multicolumn{2}{r}{~}\\
+	\hline
+	Magazine &  \\
+	\hline
+	Standard &  \\
+	Gel &  \\
+	Explosiv &  \\
+	APDS &  \\
+	\hline
+\end{tabular}
+\begin{tabular}[]{r | l}
+	\multicolumn{2}{l}{\textbf{Injektionspfeile}}\\
+	\multicolumn{2}{r}{Parashield ~}\\
+	\hline
+	Pfeile &  \\
+	Pfeile mit Narcojet &  \\
+	\hline
+\end{tabular}
+
+
+\begin{multicols}{2}
+
+\section*{Waffenmodifikationen und -zubehör}
+\begin{itemize}
+	\item ~
+\end{itemize}
+
+
+\section*{Loot}
+\begin{itemize}
+	\item ~
+\end{itemize}
+
+\end{multicols}
+
+}
