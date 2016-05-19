@@ -7,7 +7,7 @@
 \newcommand{\srCharacter}{Jack The Rigger / JTR}
 \newcommand{\srPlayer}{mist}
 \newcommand{\srNotes}{Kampfrigger}
-\newcommand{\srVersion}{1 (0.2)}
+\newcommand{\srVersion}{1.1}
 % PERSONAL DATA
 \newcommand{\srPersAlias}{JTR}
 \newcommand{\srPersMetatype}{Mensch}
@@ -16,11 +16,11 @@
 \newcommand{\srPersSex}{\male}
 \newcommand{\srPersHeight}{179}
 \newcommand{\srPersWeight}{79}
-\newcommand{\srPersStreetcred}{0}
+\newcommand{\srPersStreetcred}{2}
 \newcommand{\srPersNotoriety}{0}
 \newcommand{\srPersPublicawareness}{0}
-\newcommand{\srPersKarma}{0}
-\newcommand{\srPersTotalkarma}{0}
+\newcommand{\srPersKarma}{25}
+\newcommand{\srPersTotalkarma}{25}
 \newcommand{\srPersMisc}{}
 % ATTRIBUTES
 \newcommand{\srAttrBody}{3}
@@ -112,8 +112,10 @@
 \srQualityAdd{Allergie (Gold, Leicht)}{\begin{minipage}[t]{3.8cm}\tiny -2 auf körperliche Proben \\ solange Gold ausgesetzt \end{minipage}}{+5}
 
 %	Contacts
-\srContactsAdd{Ernest Mount Batton {\tiny Mafiaboss, Londoner Docks}}{6}{6}{}
-\srContactsAdd{}{}{}{}
+\srContactsAdd{Ernest Mountbatten {\tiny Mafiaboss, Londoner Docks}}{6}{6}{}
+\srContactsAdd{}{}{}{}{}
+
+
 
 
 
@@ -237,5 +239,45 @@
 \end{itemize}
 
 \end{multicols}
+
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%   PAGE FOUR / CONTACTS   %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\PageContacts}{
+	\section*{Connections}
+	\begin{tabu}  to \textwidth { l| l   c c c c c c c c c c c c}
+		Name & Position & Loyalität & Einfluss & Gefallen & 
+		K & G & R & S &	W & L & I & C & E \\
+		&\multicolumn{13}{l}{Fertigkeiten}\\
+		&\multicolumn{13}{l}{Notizen}\\
+		\hline
+		\hline
+		Ernest Mountbatten & Mafiaboss, Londoner Docks, Schieber & 6 & 6 && 
+			\\
+		\hline
+		Art & Johnson, London & 2 & 10 & 1 &
+			\\
+			\\
+			&\multicolumn{13}{l}{Mehrere Runs führ ihn gemacht, gute Bezahlung.}\\
+		\hline
+		Dr. Jimson & Straßendoc, London & 1 & 3 && 
+			2 & 5 & 2 & 2 & 3 & 5 & 4 & 2 & \\
+			&\multicolumn{13}{l}{
+				EH 6, Med. 8, Kyb. 7, Verhand. 4, Wahrn. 6, Biotech. 7,
+				Med. Fortschritt 6, Organhandel 4, Psych. 4, Schmuggler 3
+			}\\
+			&\multicolumn{13}{l}{Straßendoc in eigenem Krankenwagen,
+				hat für uns Leichen aufgeschnibbelt, 
+				Cyberware entfernen kostet 1000 \textyen pro h
+			}\\
+		\hline
+		Dr. White & Klinikchef, Essen, Cyberwarespezialist &1 & & 
+			\\
+			\\
+
+	\end{tabu}
 
 }
