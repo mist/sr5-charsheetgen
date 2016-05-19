@@ -109,7 +109,7 @@
 \srGearAdd{<+name+>}{<+rating+>}
 %\srGearAdd{<+name+>}{<+rating+>}
 
-\srMeeleeAdd{<+name+>}{<+reach+>}{<+dammage+>}{<+acc+>}{<+AP+>}
+%\srMeeleeAdd{<+name+>}{<+reach+>}{<+dammage+>}{<+acc+>}{<+AP+>}
 %\srMeeleeAdd{<+name+>}{<+reach+>}{<+dammage+>}{<+acc+>}{<+AP+>}
 %\srMeleeAdd{Tomahawk}{\begin{minipage}[t]{1.1cm}\tiny  2~/~~4~/~~6~/~10 \\ 0~/~-1~/~-3~/~-6 \end{minipage}}{(Str+1)K}{5}{DK}
 
@@ -213,5 +213,29 @@
 \end{itemize}
 
 \end{multicols}
+
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%   PAGE FOUR / CONTACTS   %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\PageContacts}{
+	\section*{Connections}
+	\begin{tabu}  to \textwidth { l| l   c c c c c c c c c c c c}
+		Name & Position & Loyalität & Einfluss & Gefallen & 
+		K & G & R & S &	W & L & I & C & E \\
+		&\multicolumn{13}{l}{Fertigkeiten}\\
+		&\multicolumn{13}{l}{Notizen}\\
+		\hline
+		\hline
+		<+Name+> & <+Position+> & <+Loyalität+> & <+Einfluss+> & <+Gefallen+> & 
+		<+K+> & <+G+> & <+R+> & <+S+> &	<+W+> & <+L+> & <+I+> & <+C+> & <+E+> \\
+		&\multicolumn{13}{l}{<+Fertigkeiten+>}\\
+		&\multicolumn{13}{l}{<+Notizen+>}\\
+			\\
+			\\
+
+	\end{tabu}
 
 }

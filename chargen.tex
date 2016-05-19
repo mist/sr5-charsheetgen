@@ -44,6 +44,12 @@
 % Crossed out text (\sout {})
 \usepackage{ulem}
 
+% Whole page in Landscape
+\usepackage{pdflscape}
+
+% Better tables
+\usepackage{tabu}
+
 \tikzset{every picture/.style={font issue={\fontsize{8}{12} \fontfamily{qhvc}}},
 		font issue/.style={execute at begin picture={#1\selectfont}}
 		}
@@ -399,7 +405,27 @@
 
 \PageThree
 
-\clearpage
+\begin{landscape}
+	\begin{tikzpicture}[remember picture, overlay]
+		\node[opacity=1,inner sep=0pt, rotate=90] at (8.8,-7) {
+			\includegraphics[
+				width=\paperwidth,height=\paperheight
+			]{background.png}
+		};
+		\node [anchor=center, rotate=90] at (-5,-7) {
+			\includegraphics[page=1,trim=0 760 0 2.6,clip]{sr5_blankodokumente}
+	%		\includegraphics[page=1,trim=0 760 0 0,clip]{sr5_blankodokumente}
+		};
+%		\node [anchor=west] at ( 11.2 ,	2.2) {\srCharacter};
+		\node [anchor=west, rotate=90] at ( -5.3 ,	-2.5) {\srCharacter};
+%		\node [anchor=west] at ( 10.8 ,	1.7) {\srPlayer};
+		\node [anchor=west, rotate=90] at ( -4.8 ,	-2.9) {\srPlayer};
+%		\node [anchor=west] at ( 11.8 ,	1.2 ) {\srNotes (v\srVersion)};
+		\node [anchor=west, rotate=90] at ( -4.3 ,	-1.9 ) {\srNotes (v\srVersion)};
+	\end{tikzpicture}
 
+	\PageContacts
+
+\end{landscape}
 
 \end{document}
