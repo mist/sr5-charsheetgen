@@ -4,10 +4,10 @@
 %%    PAGE ONE    %%
 %%%%%%%%%%%%%%%%%%%%
 
-\newcommand{\srCharacter}{Jack The Rigger / JTR}
+\newcommand{\srCharacter}{Jack Theodor Reynolds / Jack The Rigger / JTR}
 \newcommand{\srPlayer}{mist}
 \newcommand{\srNotes}{Kampfrigger}
-\newcommand{\srVersion}{1.1}
+\newcommand{\srVersion}{1.2}
 % PERSONAL DATA
 \newcommand{\srPersAlias}{JTR}
 \newcommand{\srPersMetatype}{Mensch}
@@ -19,31 +19,31 @@
 \newcommand{\srPersStreetcred}{2}
 \newcommand{\srPersNotoriety}{0}
 \newcommand{\srPersPublicawareness}{0}
-\newcommand{\srPersKarma}{25}
-\newcommand{\srPersTotalkarma}{25}
+\newcommand{\srPersKarma}{4}
+\newcommand{\srPersTotalkarma}{51}
 \newcommand{\srPersMisc}{}
 % ATTRIBUTES
-\newcommand{\srAttrBody}{3}
-\newcommand{\srAttrAgility}{1}
+\newcommand{\srAttrBody}{4}
+\newcommand{\srAttrAgility}{2}
 \newcommand{\srAttrReaction}{5}
-\newcommand{\srAttrStrength}{1}
+\newcommand{\srAttrStrength}{2}
 \newcommand{\srAttrWillpower}{5}
 \newcommand{\srAttrLogic}{7}
-\newcommand{\srAttrIntuition}{5}
+\newcommand{\srAttrIntuition}{7 (5 + 2 KHB)}
 \newcommand{\srAttrCharisma}{4}
-\newcommand{\srAttrEdge}{3}
+\newcommand{\srAttrEdge}{2}
 \newcommand{\srAttrEdgeMax}{7}
-\newcommand{\srAttrEssence}{3,9}
+\newcommand{\srAttrEssence}{3,1}
 \newcommand{\srAttrMagicResonance}{}
-\newcommand{\srAttrInitiative}{10+1W6}
-\newcommand{\srAttrInitiativeMatrix}{10+3W6 / 10+4W6}
+\newcommand{\srAttrInitiative}{13+2W6}
+\newcommand{\srAttrInitiativeMatrix}{13+4W6 / 13+5W6}
 \newcommand{\srAttrInitiativeAstral}{}
 \newcommand{\srAttrComposure}{9}
-\newcommand{\srAttrJudgeIntentions}{9}
+\newcommand{\srAttrJudgeIntentions}{11}
 \newcommand{\srAttrMemory}{12}
-\newcommand{\srAttrLiftCarry}{4}
-\newcommand{\srAttrMovement}{ 2 / 4 / $ +2 \frac{m}{\mathrm{Erfolg}}$}
-\newcommand{\srAttrLimitPhysical}{4}
+\newcommand{\srAttrLiftCarry}{6}
+\newcommand{\srAttrMovement}{ 4 / 8 / $ +2 \frac{m}{\mathrm{Erfolg}}$}
+\newcommand{\srAttrLimitPhysical}{5}
 \newcommand{\srAttrLimitMental}{8}
 \newcommand{\srAttrLimitSocial}{6}
 % SKILLS
@@ -51,31 +51,49 @@
 \srSkillAddL{$\rightarrow$ Feuerwaffen}{+2}
 %\srSkillAddL{Pistolen (G)}{<+Wert+>}
 \srSkillAddL{Schnellfeuerwaffen (G)}{4}
+\srSkillAddL{Sprengstoff}{}
+\srSkillAddL{}{}
 \srSkillAddL{Flugzeuge (R)}{5}
 \srSkillAddL{Bodenfahrzeuge (R)}{5}
-\srSkillAddL{Gebräuche (C)}{1}
 \srSkillAddL{}{}
 \srSkillAddL{Elektron. Kriegsführung (L)}{6}
 \srSkillAddL{Hardware}{1}
 \srSkillAddL{Software (L)}{6}
+\srSkillAddL{Computer}{2}
 \srSkillAddL{}{}
 \srSkillAddL{Fahrzeugmechanik}{5}
 \srSkillAddL{Industriemechanik}{5}
 \srSkillAddL{Luftfahrtmechanik}{5}
 \srSkillAddL{Seefahrtmechanik}{5}
 \srSkillAddL{}{}
-\srSkillAddL{Schleichen (G/L)}{3}
-\srSkillAddL{}{}
 \srSkillAddL{Wahrnehmen (I)}{1}
+\srSkillAddL{Gebräuche (C)}{1}
+\srSkillAddL{Schleichen (G/L)}{3}
 %\srSkillAddL{<+Name+>}{<+Wert+>}
 
 \srSkillAddR{Englisch}{M}
 \srSkillAddR{}{}
+\srSkillAddR{}{}
+\srSkillAddR{}{}
+\srSkillAddR{}{}
+\srSkillAddR{}{}
+\srSkillAddR{}{}
+\srSkillAddR{}{}
+\srSkillAddR{Taktik kleiner Einheiten}{}
+\srSkillAddR{}{}
+\srSkillAddR{Matrixsicherheit}{3}
+\srSkillAddR{Sicherheitstechnik}{6}
+\srSkillAddR{Materialkunde}{3}
+\srSkillAddR{Ortskenntnisse London}{3}
+\srSkillAddR{Leben im Sprawl}{5}
+\srSkillAddR{Technomancer in London}{2}
+\srSkillAddR{}{}
+\srSkillAddR{Trideo Serien/Filme}{2}
 %\srSkillAddR{<+Name+>}{<+Wert+>}
 
 % IDs/LIFESTYLE/CURRENCY
-\newcommand{\srPrimaryLifestyle}{Squatter (Miete: \sout{Abenteuerbeginn} )}
-\newcommand{\srNuyen}{800 + Start}
+\newcommand{\srPrimaryLifestyle}{}
+\newcommand{\srNuyen}{800 + 960}
 \newcommand{\srLicense}{}
 %\srIDAdd{St. \textbf{5} / Unterschicht /
 %--- / Reflexbooster; Riggerkontrolle}
@@ -105,14 +123,13 @@
 %\newcommand{\sr<+CMD+>}{<+CONT+>}
 %	TODO: CONDITION MONITOR
 %	QUALITIES
-\srQualityAdd{Black Market Pipeline (Dronen)}{\begin{minipage}[t]{3.8cm}\tiny -10\% Preis, +2W6 Verfügbarkeit \\ Verkaufspreis +40\%\end{minipage}}{-10}
+\srQualityAdd{Black Market Pipeline (Dronen/-zub.)}{\begin{minipage}[t]{3.8cm}\tiny -10\% Preis, +2W6 Verfügbarkeit \\ Verkaufspreis +40\%\end{minipage}}{-10}
 \srQualityAdd{Außergewöhnl. Attribut (Logik)}{}{-14}
 %\srQualityAdd{<+name+>}{\begin{minipage}[t]{4.5cm}\tiny <+description+>\end{minipage}}{<+Value+>}
 \srQualityAdd{}{}{}
 \srQualityAdd{Allergie (Gold, Leicht)}{\begin{minipage}[t]{3.8cm}\tiny -2 auf körperliche Proben \\ solange Gold ausgesetzt \end{minipage}}{+5}
 
 %	Contacts
-\srContactsAdd{Ernest Mountbatten {\tiny Mafiaboss, Londoner Docks}}{6}{6}{}
 \srContactsAdd{}{}{}{}{}
 
 
@@ -129,7 +146,10 @@
 \srArmorAdd{<+name+>}{<+rating+>}{<+notes+>}
 %\srArmorAdd{<+name+>}{<+rating+>}{<+notes+>}
 
-\srAugmentationAdd{<+name+>}{<+rating+>}{<+notes+>}{<+essence+>}
+\srAugmentationAdd{Riggerkontrolle}{2}{}{2}
+\srAugmentationAdd{Schlafregulator}{}{}{0,1}
+\srAugmentationAdd{Kleinhirnbooster}{2}{Int: +2}{0,4}
+\srAugmentationAdd{Synapsenbeschleunigung}{}{Ini: +1+1W6 Vert: +1W6}{0,4}
 %\srAugmentationAdd{<+name+>}{<+rating+>}{<+notes+>}{<+essence+>}
 
 \srGearAdd{<+name+>}{<+rating+>}
@@ -278,6 +298,10 @@
 			\\
 			\\
 		\hline
+		Dianna Elwes & Lobbyistin, britische Regierung & 1 & 4
+			\\
+			\\
+		\hline
 			\\
 			\\
 			\\
@@ -301,3 +325,55 @@
 	\end{tabu}
 
 }
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%   PAGE FIVE / MONEY   %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\PageMoney}{
+	\section*{Geld}
+	\begin{tabu}  to \textwidth { r | l}
+		$\pm$ / Stand & Grund ~ ~ ~ ~ ~ ~\\
+		\hline
+		\hline
+		\\
+		\hline
+		\\
+		\hline
+		\\
+		\hline
+		\\
+		\hline
+		\\
+		\hline
+		\\
+		\hline
+		\\
+		\hline
+		\\
+		\hline
+		\\
+		\hline
+		\\
+		\hline
+		\\
+		\hline
+		\\
+		\hline
+		\\
+		\hline
+		\\
+		\hline
+		\\
+		\hline
+		\\
+		\hline
+		\\
+		\hline
+		\\
+
+	\end{tabu}
+
+}
+
